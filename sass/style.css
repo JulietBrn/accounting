@@ -1,76 +1,82 @@
 @charset "UTF-8";
 /* В аругумент миксина мы будем указывать несколько вариантов брейкпоинтов, таких как:
-
-    - phone
-    - tab-port
-    - tab-land
-    - big-screen
-
-    */
-/* Отступ снизу */
-/* Основные цвета сайта */
+ *
+ *  - phone
+ *  - tab-port
+ *  - tab-land
+ *  - big-screen
+ *
+ *  */
+/* Отступ снизу */ /* Основные цвета сайта */
 *, ::after, ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 li {
-  list-style: none; }
+  list-style: none;
+}
 
 .container {
   display: grid;
   grid-template-rows: 80vh repeat(2, min-content);
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr);
-  row-gap: 11rem; }
+  row-gap: 11rem;
+}
 
 .main-container {
   grid-column: 2/3;
   display: grid;
   grid-template-rows: repeat(6, min-content);
-  row-gap: 11rem; }
+  row-gap: 11rem;
+}
 
 /* анимация, которая поднимает кнопку на 5rem наверх */
 /* @keyframes btnToUp
-    0%
-        opacity: 0
-        transform: translateY(5rem)
-    100%
-        opacity: 1
-        transform: translateY(0px) */
+ *  0%
+ *      opacity: 0
+ *      transform: translateY(5rem)
+ *  100%
+ *      opacity: 1
+ *      transform: translateY(0px) */
 /* анимация, которая двигает текст слева направо */
 /* @keyframes leftToRight
-    0%
-        opacity: 0
-        transform: translateX(-10rem)
-    80%
-        transform: translateX(1rem)
-    100%
-        opacity: 1
-        transform: translateX(0px) */
+ *  0%
+ *      opacity: 0
+ *      transform: translateX(-10rem)
+ *  80%
+ *      transform: translateX(1rem)
+ *  100%
+ *      opacity: 1
+ *      transform: translateX(0px) */
 /* анимация, которая двигает текст справа налево */
 /* @keyframes RightToleft
-    0%
-        opacity: 0
-        transform: translateX(10rem)
-    80%
-        transform: translateX(-1rem)
-    100%
-        opacity: 1
-        transform: translateX(0px)
- */
+ *  0%
+ *      opacity: 0
+ *      transform: translateX(10rem)
+ *  80%
+ *      transform: translateX(-1rem)
+ *  100%
+ *      opacity: 1
+ *      transform: translateX(0px)
+ * */
 /* h1 */
 .main-title {
   font-family: Komet;
   font-size: 6.4rem;
   font-style: normal;
   font-weight: 900;
-  line-height: 112.5%; }
+  line-height: 112.5%;
+}
 
 /* h2  */
 .second-title {
@@ -78,14 +84,16 @@ li {
   font-size: 4.8rem;
   font-style: normal;
   font-weight: 900;
-  line-height: 112.5%; }
+  line-height: 112.5%;
+}
 
 /* h3 */
 .third-title {
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal; }
+  line-height: normal;
+}
 
 /* h4 */
 .paragraph-text {
@@ -93,50 +101,58 @@ li {
   font-size: 2rem;
   font-style: normal;
   line-height: 170%;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .paragraph-text_bold {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 .coworker {
   position: relative;
   max-width: 25rem;
   max-height: 25rem;
-  border-radius: 50%; }
-  .coworker__description {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .coworker__img {
-    max-width: 25rem;
-    max-height: 25rem;
-    border-radius: 50%; }
-  .coworker__name {
-    color: #ffffff;
-    text-align: center;
-    font-family: Inter;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 1.7rem; }
-  .coworker__job {
-    color: #ffffff;
-    text-align: center;
-    font-family: Inter;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal; }
+  border-radius: 50%;
+}
+.coworker__description {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.coworker__img {
+  max-width: 25rem;
+  max-height: 25rem;
+  border-radius: 50%;
+}
+.coworker__name {
+  color: #ffffff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 1.7rem;
+}
+.coworker__job {
+  color: #ffffff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .coworker:hover {
   box-shadow: 0px 267px 21px 0px rgba(0, 0, 0, 0.25) inset;
   filter: blur(5px);
   /* &__description
-        display: block
-         */ }
+  *  display: block
+  *   */
+}
 
 /* Компонент кнопки */
 .btn__consultation {
@@ -144,96 +160,117 @@ li {
   color: #68D268;
   background-color: #ffffff;
   border: none;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   font-family: Komet;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
   line-height: 112.5%;
-  border-bottom: 1px solid #68D268; }
+  border-bottom: 1px solid #68D268;
+}
 
 .header-section {
   grid-column: 2/3;
-  background-color: #F2F2F2; }
+  background-color: #F2F2F2;
+}
 
 .nav-wrapper {
   height: 7rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+}
 
 .nav-list {
   display: grid;
   grid-template-columns: repeat(4, min-content);
-  column-gap: 8rem; }
-  .nav-list__item a {
-    color: #000000; }
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
+}
+.nav-list__item a {
+  color: #000000;
+}
 
 .welcome__main-title {
-  margin-bottom: 7rem; }
-
+  margin-bottom: 7rem;
+}
 .welcome__text {
-  max-width: 51.6rem; }
+  max-width: 51.6rem;
+}
 
 .footer-section {
   grid-column: 2/3;
-  background-color: #939393; }
+  background-color: #939393;
+}
 
 .our-team-section__title {
   max-width: 52rem;
-  margin-bottom: 3.6rem; }
-
+  margin-bottom: 3.6rem;
+}
 .our-team-section__text {
   max-width: 64rem;
-  margin-bottom: 8rem; }
-
+  margin-bottom: 8rem;
+}
 .our-team-section .btn-wrapper {
   display: flex;
-  justify-content: center; }
-
+  justify-content: center;
+}
 .our-team-section .coworkers-box {
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: repeat(auto-fill, 25rem);
   gap: 3rem;
-  margin-bottom: 4.6rem; }
+  margin-bottom: 4.6rem;
+}
 
 .services-section__title {
-  margin-bottom: 8rem; }
-
+  margin-bottom: 8rem;
+}
 .services-section__cards-box {
   display: grid;
   grid-template-columns: repeat(auto-fill, 54.5rem);
-  gap: 5rem; }
+  gap: 5rem;
+}
 
 .card {
   background-color: #F2F2F2;
   padding: 5rem;
   display: grid;
-  row-gap: 2.3rem; }
-  .card__img {
-    width: 13.2rem; }
-  .card li {
-    list-style: inside; }
-    .card li .paragraph-text {
-      line-height: 150%; }
+  row-gap: 2.3rem;
+}
+.card__img {
+  width: 13.2rem;
+}
+.card li {
+  list-style: inside;
+}
+.card li .paragraph-text {
+  line-height: 150%;
+}
 
 .advantages-section {
   background-color: #F2F2F2;
-  padding: 11rem 0; }
-  .advantages-section__title {
-    margin-bottom: 3.6rem; }
-  .advantages-section__text {
-    max-width: 66rem;
-    margin-bottom: 8rem; }
+  padding: 11rem 0;
+}
+.advantages-section__title {
+  margin-bottom: 3.6rem;
+}
+.advantages-section__text {
+  max-width: 66rem;
+  margin-bottom: 8rem;
+}
 
 .advantages-section__box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 11.2rem;
-  row-gap: 3.2rem; }
-  .advantages-section__box img {
-    margin-bottom: 1.4rem; }
+  -moz-column-gap: 11.2rem;
+       column-gap: 11.2rem;
+  row-gap: 3.2rem;
+}
+.advantages-section__box img {
+  margin-bottom: 1.4rem;
+}
 
 .reviews-section {
-  background-color: #F2F2F2; }
+  background-color: #F2F2F2;
+}/*# sourceMappingURL=style.css.map */

@@ -3,32 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Бухгалтерские услуги</title>
+    <meta name="description" content="Бухгалтерские услуги, консультации, аудит, кадровое делопроизводство">
 </head>
 <body>
-    <header class="header-section">
-        <div>
-            <div class="logo"></div>
-            <nav>
+    <div class="container">
+        <header class="header-section">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="icons/logo.svg" alt="logo">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list__item"><a class="paragraph-text" href="#">Услуги</a> </li>
+                        <li class="nav-list__item"><a class="paragraph-text" href="#">Цены</a> </li>
+                        <li class="nav-list__item"><a class="paragraph-text" href="#">Тарифы</a> </li>
+                        <li class="nav-list__item"><a class="paragraph-text" href="#">Контакты</a> </li>
+                    </ul>
 
-            </nav>
-        </div>
-        <div class="welcome">
+                </nav>
+            </div>
+            <div class="welcome">
+                <h1 class="welcome__main-title main-title">Комплексное бухгалтерское обслуживание для малого бизнеса</h1>
+                <p class="welcome__text paragraph-text">Возьмем на себя все вопросы прямо или косвенно связанные с бухгалтерией и делопроизводством на вашем предприятии.</p>
 
-        </div>
-        
-    </header>
-    <main>
-        <section class="our-team-section"></section>
-        <section class="services-section"></section>
-        <section class="advantages-section"></section>
-        <section class="prices-section"></section>
-        <section class="reviews-section"></section>
-        <section class="contacts-section"></section>
-    </main>
-    <footer>
-        
-    </footer>
+            </div>
+            
+        </header>
+        <main class="main-container">
+            <section class="our-team-section">
+                <h2 class="our-team-section__title second-title">Больше, чем просто бухгалтерия</h2>
+                <p class="our-team-section__text paragraph-text">Вы можете рассчитывать на надежную и квалифицированную помощь. В нашей команде — <span class="paragraph-text_bold">опытные бухгалтеры, квалифицированные налоговые консультанты, практикующие аудиторы.</span></p>
+                <div class="coworkers-box">
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-1.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Виктория</p>
+                            <p class="coworker__job">Бухгалтер, аудитор</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-2.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Ирина</p>
+                            <p class="coworker__job">Главный бухгалтер</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-3.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Егор</p>
+                            <p class="coworker__job">Специалист по кадрам</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-4.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Анастасия</p>
+                            <p class="coworker__job">Специалист по кадрам</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-5.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Екатерина</p>
+                            <p class="coworker__job">Бухгалтер, аудитор</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-6.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Роман</p>
+                            <p class="coworker__job">Аудитор</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-7.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Дмитрий</p>
+                            <p class="coworker__job">Налоговый консультант</p>
+                        </div>
+                    </div>
+                    <div class="coworker">
+                        <img class="coworker__img" src="img/coworker-8.jpg" alt="coworker">
+                        <div class="coworker__description">
+                            <p class="coworker__name">Егор</p>
+                            <p class="coworker__job">Аудитор, налоговый консультант</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn__consultation">Получить консультацию</button>
+                </div>
+                
+            </section>
+            <section class="services-section">
+                <h2 class="services-section__title second-title">Профессиональное сопровождение вашего бизнеса</h2>
+                <div class="services-section__cards-box cards-box">
+                    <div class="card">
+                        <img src="icons/servicies/pig.svg" alt="money" class="card__img">
+                        <h3 class="card__title third-title">Бухгалтерские услуги</h3>
+                        <div class="card__description">
+                            <ul>
+                                <li class="paragraph-text">Ведение бухгалтерского учета по законодательству РФ (РСФО)</li>
+                                <li class="paragraph-text">Сдача отчетности в налоговую и фонды</li>
+                                <li class="paragraph-text">Формирование учетной политики</li>
+                                <li class="paragraph-text">Сопровождение налоговых проверок</li>
+                                <li class="paragraph-text">Восстановлениие бухгалтерского учета</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="icons/servicies/hr.svg" alt="hr" class="card__img">
+                        <h3 class="card__title third-title">Кадровое делопроизводство</h3>
+                        <div class="card__description">
+                            <ul>
+                                <li class="paragraph-text">Оформление трудовых договорв, приказов, шаблонов заявлений</li>
+                                <li class="paragraph-text">Формирование графика отпусков</li>
+                                <li class="paragraph-text">Подготовка правил внутреннего распорядка</li>
+                                <li class="paragraph-text">Составление должностных инструкций</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="icons/servicies/bag.svg" alt="consulting" class="card__img">
+                        <h3 class="card__title third-title">Налоговое консультирование</h3>
+                        <div class="card__description">
+                            <ul>
+                                <li class="paragraph-text">Консультации по выбору системы налогообложения</li>
+                                <li class="paragraph-text">Определение потенциальных налоговых рисков</li>
+                                <li class="paragraph-text">Консультации по текущим вопросам исчисления и уплаты налогов</li>
+                                <li class="paragraph-text">Сопровождение налоговых проверок</li>
+                                <li class="paragraph-text">Консультации по налоговым последствиям отдельных сделок</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="icons/servicies/control.svg" alt="control" class="card__img">
+                        <h3 class="card__title third-title">Аудит</h3>
+                        <div class="card__description">
+                            <ul>
+                                <li class="paragraph-text">Обязательный аудит</li>
+                                <li class="paragraph-text">Бухгалтерский и налоговый аудит для собственника бизнеса</li>
+                                <li class="paragraph-text">Выявление нарушений и рисков и рекомендации по их устранению или локализации</li>
+                                <li class="paragraph-text">Совершенствование контрольных процедур</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages-section">
+                <h2 class="advantages-section__title second-title">Преимущества работы с нами</h2>
+                <p class="paragraph-text advantages-section__text">Комплексное бухгалтерское обслуживание дает вашей компании ряд преимуществ</p>
+                <div class="advantages-section__box">
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/coin.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Экономия средств</h4>
+                        <p class="box-item__description paragraph-text">Нет расходов на организацию рабочих мест и зарплат</p>
+                    </div>
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/clock.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Экономия времени</h4>
+                        <p class="box-item__description paragraph-text">Не нужно тратить время и ресурсы на обучение и контроль штатного специалиста</p>
+                    </div>
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/opimization.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Оптимизация</h4>
+                        <p class="box-item__description paragraph-text">В случае расширения бизнеса и увеличения нагрузки не нужно принимать на работу новых сотрудников</p>
+                    </div>
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/insuarance.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Страхование</h4>
+                        <p class="box-item__description paragraph-text">Страхование ответственности исключает риск убытков и расходов на штрафы</p>
+                    </div>
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/mortarboard.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Компетентность</h4>
+                        <p class="box-item__description paragraph-text">Мы проводим регулярные обучения наших сотрудников, в том числе внутри компании</p>
+                    </div>
+                    <div class="advantagees-section__box-item">
+                        <img src="icons/advantages/safe2.png" alt="" class="box-item__img">
+                        <h4 class="box-item__title paragraph-text paragraph-text_bold">Конфиденциальность</h4>
+                        <p class="box-item__description paragraph-text">Полная конфиденциальность, в том числе после прекращения сотрудничества.</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="prices-section">
+                <h2 class="second-title">Тарифы на сопровождение</h2>
+                <!-- компонент тарифы -->
+                <button></button>
+            </section>
+            <section class="reviews-section">
+                <h2 class="second-title">Отзывы наших клиентов</h2>
+                <div class="reviews-section__box">
+                    <div class="reviews-section__box-item card">
+                        <img src="" alt="" class="card__img">
+                        <div class="card__client">
+                            <p class="card__client-job">Собственник ООО «Дария»</p>
+                            <p class="card__client-name">Сибин Денис</p>
+                        </div>
+                        <p class="card__review">Помогли восстановить учет после предыдущего бухгалтера и ответили на все запросы налоговой. Сейчас и дальше продолжаю пользоваться их услугами, пока всем доволен.</p>
+                    </div>
+                </div>
+                <button>Посмотреть еще</button>
+            </section>
+            <section class="contacts-section">
+                <h2 class="second-title">Свяжитесь с нами</h2>
+                <div class="contacts-section__details"></div>
+                <div class="contacts-section__form"></div>
+            </section>
+        </main>
+        <footer class="footer-section">
+            <p>information</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,7 +1,60 @@
-// .our-team-section
+.our-team-section
+    &__title
+        max-width: 52rem
+        margin-bottom: 3.6rem
+    &__text
+        max-width: 64rem
+        margin-bottom: 8rem
+    .btn-wrapper
+        display: flex
+        justify-content: center
+    .coworkers-box
+        display: grid
+        grid-template-rows: repeat(2, min-content)
+        grid-template-columns: repeat(auto-fill, 25rem)
+        gap: 3rem
+        margin-bottom: 4.6rem
 
-// .services-section
-// .advantages-section
+
+.services-section
+    &__title
+        margin-bottom: 8rem
+    &__cards-box
+        display: grid
+        grid-template-columns: repeat(auto-fill, 54.5rem)
+        gap: 5rem
+.card
+    background-color: $gray-color
+    padding: 5rem
+    display: grid
+    row-gap: 2.3rem
+    &__img
+        width: 13.2rem
+    li 
+        list-style: inside
+        .paragraph-text
+            line-height: 150%
+
+
+
+
+.advantages-section
+    background-color: $gray-color
+    padding: 11rem 0
+    &__title
+        margin-bottom: 3.6rem
+    &__text
+        max-width: 66rem
+        margin-bottom: 8rem
+.advantages-section__box
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 11.2rem
+    row-gap: 3.2rem
+    img
+        margin-bottom: 1.4rem
+
 // .prices-section
-// .reviews-section
+.reviews-section
+    background-color: $gray-color
 // .contacts-section
