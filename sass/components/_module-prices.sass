@@ -1,0 +1,86 @@
+.module-prices
+    
+    &__header
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        height: 8rem
+        margin-bottom: 5rem
+        .header-cell
+            align-self: center
+            border: .2rem solid $green-color
+            font-family: komet, sans-serif
+            font-size: 1.6rem
+            font-style: normal
+            font-weight: 700
+            line-height: 112.5%
+            text-align: center
+            padding-top: 2rem
+            padding-bottom: 2rem
+        .active
+            background-color: $green-color
+        &>p:not(:last-child)
+            border-right: none
+        &>p:first-child
+            padding-top: calc( (7.9rem - 2.11rem)/2 )
+            padding-bottom: calc( (7.9rem - 2.11rem)/2 )
+    &__content
+        width: 83%
+        background-color: $gray-color
+        display: grid
+        grid-template-rows: repeat(3, min-content)
+        row-gap: 3.3rem
+        padding: 3rem
+        margin: 0 auto
+    &__content-features
+        display: grid
+        grid-template-columns: repeat(3, max-content)
+        gap: 3rem
+    .content-benefits
+        background-color: $white-color
+        padding: 1.5rem
+        &__title
+            display: flex
+            align-items: center
+            margin-bottom: 1.3rem
+        &__content
+            display: grid
+            row-gap: 1rem
+    .wrapper
+        display: grid
+        grid-template-columns: minmax(max-content, .8fr) max-content
+        column-gap: 2rem
+        .list-item
+            background: url(../icons/point.png) no-repeat
+            padding-left: 2rem
+            margin-bottom: .9rem
+    &__prices
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+
+        .buttons__wrapper
+            display: flex
+            flex-direction: column
+    &__monthly, &__quarterly
+        display: grid
+        grid-template-columns: max-content max-content
+        column-gap: 4rem
+    .monthly__month, .monthly__quarter
+        font-family: komet, sans-serif
+        font-size: 1.6rem
+        font-style: normal
+        font-weight: 700
+        line-height: 1.1
+    .price
+        font-size: 3.6rem   
+    .extra-info
+        font-weight: 400
+
+.open-sans-16
+    font-family: open sans, sans-serif
+    font-size: 1.6rem
+    font-style: normal
+    font-weight: 400
+    line-height: 112.5%
+
+.open-sans-16_bold
+    font-weight: 700

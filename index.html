@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="sass/style.css">
     <title>Бухгалтерские услуги</title>
     <meta name="description" content="Бухгалтерские услуги, консультации, аудит, кадровое делопроизводство">
 </head>
 <body>
     <div class="container">
+        <div class="background-container"></div>
         <header class="header-section">
             <div class="nav-wrapper">
                 <div class="logo">
@@ -22,13 +23,12 @@
                         <li class="nav-list__item"><a class="paragraph-text" href="#">Тарифы</a> </li>
                         <li class="nav-list__item"><a class="paragraph-text" href="#">Контакты</a> </li>
                     </ul>
-
                 </nav>
             </div>
             <div class="welcome">
                 <h1 class="welcome__main-title main-title">Комплексное бухгалтерское обслуживание для малого бизнеса</h1>
                 <p class="welcome__text paragraph-text">Возьмем на себя все вопросы прямо или косвенно связанные с бухгалтерией и делопроизводством на вашем предприятии.</p>
-
+                <img class="welcome__img" src="img/welcome.svg" alt="folders">
             </div>
             
         </header>
@@ -95,15 +95,15 @@
                     </div>
                 </div>
                 <div class="btn-wrapper">
-                    <button class="btn__consultation">Получить консультацию</button>
+                    <button class="btn btn__consultation">Получить консультацию</button>
                 </div>
                 
             </section>
             <section class="services-section">
-                <h2 class="services-section__title second-title">Профессиональное сопровождение вашего бизнеса</h2>
+                <h2 class="services-section__title second-title">Профессиональное сопровождение вашего бизнеса</h2>
                 <div class="services-section__cards-box cards-box">
                     <div class="card">
-                        <img src="icons/servicies/pig.svg" alt="money" class="card__img">
+                        <img src="icons/serviciesN/pig.svg" alt="money" class="card__img">
                         <h3 class="card__title third-title">Бухгалтерские услуги</h3>
                         <div class="card__description">
                             <ul>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="icons/servicies/hr.svg" alt="hr" class="card__img">
+                        <img src="icons/serviciesN/hr.svg" alt="hr" class="card__img">
                         <h3 class="card__title third-title">Кадровое делопроизводство</h3>
                         <div class="card__description">
                             <ul>
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="icons/servicies/bag.svg" alt="consulting" class="card__img">
+                        <img src="icons/serviciesN/taxes.svg" alt="consulting" class="card__img">
                         <h3 class="card__title third-title">Налоговое консультирование</h3>
                         <div class="card__description">
                             <ul>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="icons/servicies/control.svg" alt="control" class="card__img">
+                        <img src="icons/serviciesN/audit.svg" alt="control" class="card__img">
                         <h3 class="card__title third-title">Аудит</h3>
                         <div class="card__description">
                             <ul>
@@ -192,33 +192,144 @@
                 </div>
             </section>
             <section class="prices-section">
-                <h2 class="second-title">Тарифы на сопровождение</h2>
+                <h2 class="second-title prices-section__title">Тарифы на сопровождение</h2>
                 <!-- компонент тарифы -->
+                <div class="module-prices__wrapper module-prices">
+                    <div class="module-prices__header">
+                        <p class="header-cell active">OOO</p>
+                        <p class="header-cell">ИП УСН ДОХОДЫ<br>без сотрудников</p>
+                        <p class="header-cell">ИП УСН ДОХОДЫ - РАСХОДЫ<br>без сотрудников</p>
+                    </div>
+                    <div class="module-prices__content">
+                        <div class="module-prices__content-features">
+                            <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
+                            <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
+                            <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+                        </div>
+                        <div class="wrapper">
+                            <div class="module-prices__content-services">
+                                <ul>
+                                    <li class="list-item open-sans-16">Налоговый учет</li>
+                                    <li class="list-item open-sans-16">Подготовка отчетности</li>
+                                    <li class="list-item open-sans-16">Учет первичной документации по расходам</li>
+                                    <li class="list-item open-sans-16">Формирование платежных поручений</li>
+                                    <li class="list-item open-sans-16">Общение с налоговой</li>
+                                </ul>
+                            </div>
+                            <div class="module-prices__content-benefits content-benefits">
+                                <div class="content-benefits__title ">
+                                    <p class="open-sans-16 open-sans-16_bold">Бонус!</p>
+                                    <img src="icons/benefit.png" alt="benefit">
+                                </div>
+                                <div class="content-benefits__content">
+                                    <p class="open-sans-16">Бесплатный экспресс-аудит</p>
+                                    <p class="open-sans-16">Консультации в чате без ограничений</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module-prices__prices">
+                            <div class="module-prices__monthly monthly">
+                                <div class="monthly__month">
+                                    <p class="month">месяц</p>
+                                    <p class="price">15 000 ₽</p>
+                                </div>
+                                <div class="buttons__wrapper">
+                                    <button class="btn btn__activate">Подключить</button>
+                                    <button class="btn btn__consultation">Получить консультацию</button>
+                                </div>
+                            </div>
+                            <div class="module-prices__quarterly">
+                                <div class="monthly__quarter">
+                                    <p class="month">месяц</p>
+                                    <p class="price">15 000 ₽</p>
+                                    <p class="extra-info">при оплате за квартал</p>
+                                </div>
+                                <div class="buttons__wrapper">
+                                    <button class="btn btn__activate">Подключить</button>
+                                    <button class="btn btn__consultation">Получить консультацию</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
                 <button></button>
             </section>
             <section class="reviews-section">
-                <h2 class="second-title">Отзывы наших клиентов</h2>
+                <h2 class="second-title reviews-section__title">Отзывы наших клиентов</h2>
                 <div class="reviews-section__box">
-                    <div class="reviews-section__box-item card">
-                        <img src="" alt="" class="card__img">
-                        <div class="card__client">
-                            <p class="card__client-job">Собственник ООО «Дария»</p>
-                            <p class="card__client-name">Сибин Денис</p>
+                    <div class="reviews-section__box-item review-card">
+                        <img src="img/reviews-3.jpg" alt="client-photo" class="review-card__img">
+                        <div class="review-card__client paragraph-text paragraph-text_normal">
+                            <p class="review-card__client-job">Собственник ООО «Дария»</p>
+                            <p class="review-card__client-name">Сибин Денис</p>
                         </div>
-                        <p class="card__review">Помогли восстановить учет после предыдущего бухгалтера и ответили на все запросы налоговой. Сейчас и дальше продолжаю пользоваться их услугами, пока всем доволен.</p>
+                        <p class="review-card__review paragraph-text paragraph-text_normal">Помогли восстановить учет после предыдущего бухгалтера и ответили на все запросы налоговой. Сейчас и дальше продолжаю пользоваться их услугами, пока всем доволен.</p>
+                    </div>
+                    <div class="reviews-section__box-item review-card">
+                        <img src="img/reviews-2.jpg" alt="client-photo" class="review-card__img">
+                        <div class="review-card__client paragraph-text paragraph-text_normal">
+                            <p class="review-card__client-job">Главный бухгалтер в ООО «Лето»</p>
+                            <p class="review-card__client-name">Петрова Ирина</p>
+                        </div>
+                        <p class="review-card__review paragraph-text paragraph-text_normal">Сотрудники данной компании выполняют все задачи оперативно и профессионально: ведут бухгалтерию, осуществляют переписку с налоговой и предоставляют ценные налоговые консультации. Мы довольны результатами и надежностью этой компании.</p>
+                    </div>
+                    <div class="reviews-section__box-item review-card">
+                        <p class="none"></p>
+                        <div class="review-card__client paragraph-text paragraph-text_normal">
+                            <p class="review-card__client-job">Индивидуальный предприниматель</p>
+                            <p class="review-card__client-name">Попова Елена</p>
+                        </div>
+                        <p class="review-card__review paragraph-text paragraph-text_normal">Фирма помогла мне разобраться с налоговыми вопросами и полностью вела мою бухгалтерию. Опыт и их внимательность к деталям позволяют мне быть уверенной в правильности ведения моих финансов. Благодаря этому я могу сосредоточиться на своем бизнесе.</p>
+                    </div>
+                    <div class="reviews-section__box-item review-card">
+                        <img src="img/reviews-1.jpg" alt="client-photo" class="review-card__img">
+                        <div class="review-card__client paragraph-text paragraph-text_normal">
+                            <p class="review-card__client-job">Директор ООО «Стоун»</p>
+                            <p class="review-card__client-name">Королев Евгений</p>
+                        </div>
+                        <p class="review-card__review paragraph-text paragraph-text_normal">Обращался за налоговой консультацией. Рассказали о возможных рисках, о которых я и не мог подумать. Посоветовали возможные оптимальные варианты.</p>
                     </div>
                 </div>
-                <button>Посмотреть еще</button>
+                <div class="btn-wrapper btn-wrapper__more">
+                    <button class="btn btn__more">Посмотреть еще</button>
+                </div>
             </section>
             <section class="contacts-section">
-                <h2 class="second-title">Свяжитесь с нами</h2>
-                <div class="contacts-section__details"></div>
-                <div class="contacts-section__form"></div>
+                <h2 class="second-title contacts-section__title">Свяжитесь с нами</h2>
+                <div class="contacts-section__wrapper">
+                    <div class="contacts-section__details paragraph-text">
+                        <div class="wrapper">
+                            <a class="paragraph-text_underline" href="tel:+7 (920) 531 67 98">8 (920) 531 67 98</a>
+                            <a class="paragraph-text_underline" href="mailto:info@colsult.com">info@colsult.com</a>
+                        </div>
+                        <p class="details-text">Москва г.,<br>Ленинский проспект 191 , офис 53</p>
+                    </div>
+                    <div class="contacts-section__form-wrapper">
+                        <form class="contacts-section__form" action="">
+                            <label for="name"></label>
+                            <input class="form-input" type="text" id="name" placeholder="Ваше имя">
+                            <label for="phone"></label>
+                            <input class="form-input" type="tel" id="phone" placeholder="Номер телефона">
+                            <label for="email"></label>
+                            <input class="form-input" type="email" id="email" placeholder="Электронная почта">
+                            <label for="message"></label>
+                            <input class="form-input" type="text" id="message" placeholder="Сообщение">
+                            <div class="contacts-section__btn-wrapper">
+                                <button class="btn btn__send">Отправить</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                
             </section>
         </main>
         <footer class="footer-section">
             <p>information</p>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

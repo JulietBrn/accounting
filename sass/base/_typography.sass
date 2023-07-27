@@ -1,6 +1,6 @@
 /* h1 */
 .main-title 
-    font-family: Komet
+    font-family: komet, sans-serif
     font-size: 6.4rem
     font-style: normal
     font-weight: 900
@@ -8,7 +8,7 @@
 
 /* h2  */
 .second-title
-    font-family: Komet
+    font-family: komet, sans-serif
     font-size: 4.8rem
     font-style: normal
     font-weight: 900
@@ -16,6 +16,7 @@
 
 /* h3 */
 .third-title
+    font-family: komet, sans-serif
     font-size: 3.2rem
     font-style: normal
     font-weight: 700
@@ -23,13 +24,22 @@
 
 /* h4 */
 
+@font-face
+    font-family: 'open sans'
+    src: local('open sans')
+    src: url(../font/Open_Sans/static/OpenSans-Regular.ttf)
+
 
 .paragraph-text
-    font-family: Inter
+    font-family: open sans, sans-serif
+    line-height: 170%
     font-size: 2rem
     font-style: normal
-    line-height: 170%
     font-weight: 400
 
 .paragraph-text_bold
     font-weight: 600
+.paragraph-text_normal
+    line-height: normal
+
+
