@@ -6,6 +6,7 @@
         height: 8rem
         margin-bottom: 5rem
         .header-cell
+            cursor: pointer
             align-self: center
             border: .2rem solid $green-color
             font-family: komet, sans-serif
@@ -42,6 +43,8 @@
             display: flex
             align-items: center
             margin-bottom: 1.3rem
+            &>p:first-child
+                margin-right: .9rem
         &__content
             display: grid
             row-gap: 1rem
@@ -49,10 +52,13 @@
         display: grid
         grid-template-columns: minmax(max-content, .8fr) max-content
         column-gap: 2rem
+        align-items: start
         .list-item
             background: url(../icons/point.png) no-repeat
             padding-left: 2rem
             margin-bottom: .9rem
+            &:last-child
+                margin-bottom: 0
     &__prices
         display: grid
         grid-template-columns: repeat(2, 1fr)

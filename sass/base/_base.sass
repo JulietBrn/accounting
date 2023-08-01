@@ -38,3 +38,14 @@ li
     display: grid
     grid-template-rows: repeat(6, min-content)
     row-gap: 11rem
+
+    /* Страница Цены и тарифы */
+.prices-container
+    display: grid
+    grid-template-rows: repeat(6, min-content)
+    grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr)
+    row-gap: 8rem
+    
+.prices-container > *
+    grid-column: 2/3
+    

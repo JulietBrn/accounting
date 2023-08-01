@@ -1,10 +1,14 @@
+
+/* Добавление новых карточек отзыва */
+
 const btnMore = document.querySelector('.btn__more')
-const brnWrapperMore = document.querySelector('.btn-wrapper__more')
+const btnWrapperMore = document.querySelector('.btn-wrapper__more')
 const reviewBox = document.querySelector('.reviews-section__box')
 
 console.log(btnMore);
+console.log(btnWrapperMore);
 function hiddenButton() {
-    brnWrapperMore.classList.add('hidden')
+    btnWrapperMore.style.display = 'none'
 }
 function showMoreReviews() {
     reviewBox.insertAdjacentHTML('beforeend', 
@@ -42,7 +46,10 @@ function showMoreReviews() {
     </div>`)
 }
 
-btnMore.addEventListener('click', showMoreReviews)
+btnMore.addEventListener('click', () => {
+    showMoreReviews()
+    hiddenButton()
+})
 
 
 /* const btnOpenModal = document.querySelectorAll(".show-modal");
@@ -74,3 +81,201 @@ document.addEventListener("keydown", function (event) {
   }
 });
  */
+
+
+/* Переключение ООО - ИП Д - ИП Д-Р */
+const btnCompany = document.querySelector('#btn-company')
+const btnIncome = document.querySelector('#btn-income')
+const btnIncomeCosts = document.querySelector('#btn-income-minus-costs')
+const modulePrices = document.querySelector('.module-prices')
+const incomeContent = `
+<div class="module-prices__content">
+  <div class="module-prices__content-features">
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
+  </div>
+  <div class="wrapper">
+    <div class="module-prices__content-services">
+        <ul>
+            <li class="list-item open-sans-16">Налоговый учет</li>
+            <li class="list-item open-sans-16">Подготовка отчетности</li>
+            <li class="list-item open-sans-16">Формирование платежных поручений</li>
+            <li class="list-item open-sans-16">Общение с налоговой</li>
+        </ul>
+    </div>
+    <div class="module-prices__content-benefits content-benefits">
+        <div class="content-benefits__title ">
+            <p class="open-sans-16 open-sans-16_bold">Бонус!</p>
+            <img src="icons/benefit.png" alt="benefit">
+        </div>
+        <div class="content-benefits__content">
+            <p class="open-sans-16">Бесплатный экспресс-аудит</p>
+            <p class="open-sans-16">Консультации в чате без ограничений</p>
+        </div>
+    </div>
+  </div>
+  <div class="module-prices__prices">
+    <div class="module-prices__monthly monthly">
+        <div class="monthly__month">
+            <p class="month">месяц</p>
+            <p class="price">3 000 ₽</p>
+        </div>
+        <div class="buttons__wrapper">
+            <button class="btn btn__activate">Подключить</button>
+            <button class="btn btn__consultation">Получить консультацию</button>
+        </div>
+    </div>
+    <div class="module-prices__quarterly">
+        <div class="monthly__quarter">
+            <p class="month">месяц</p>
+            <p class="price">2 500 ₽</p>
+            <p class="extra-info">при оплате за квартал</p>
+        </div>
+        <div class="buttons__wrapper">
+            <button class="btn btn__activate">Подключить</button>
+            <button class="btn btn__consultation">Получить консультацию</button>
+        </div>
+    </div>
+  </div>
+</div>`
+const incomeCostsContent = `
+<div class="module-prices__content">
+  <div class="module-prices__content-features">
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
+  </div>
+  <div class="wrapper">
+    <div class="module-prices__content-services">
+        <ul>
+            <li class="list-item open-sans-16">Налоговый учет</li>
+            <li class="list-item open-sans-16">Подготовка отчетности</li>
+            <li class="list-item open-sans-16">Формирование платежных поручений</li>
+            <li class="list-item open-sans-16">Учет первичной документации по расходам</li>
+            <li class="list-item open-sans-16">Общение с налоговой</li>
+        </ul>
+    </div>
+    <div class="module-prices__content-benefits content-benefits">
+        <div class="content-benefits__title ">
+            <p class="open-sans-16 open-sans-16_bold">Бонус!</p>
+            <img src="icons/benefit.png" alt="benefit">
+        </div>
+        <div class="content-benefits__content">
+            <p class="open-sans-16">Бесплатный экспресс-аудит</p>
+            <p class="open-sans-16">Консультации в чате без ограничений</p>
+        </div>
+    </div>
+  </div>
+  <div class="module-prices__prices">
+    <div class="module-prices__monthly monthly">
+        <div class="monthly__month">
+            <p class="month">месяц</p>
+            <p class="price">6 000 ₽</p>
+        </div>
+        <div class="buttons__wrapper">
+            <button class="btn btn__activate">Подключить</button>
+            <button class="btn btn__consultation">Получить консультацию</button>
+        </div>
+    </div>
+    <div class="module-prices__quarterly">
+        <div class="monthly__quarter">
+            <p class="month">месяц</p>
+            <p class="price">5 000 ₽</p>
+            <p class="extra-info">при оплате за квартал</p>
+        </div>
+        <div class="buttons__wrapper">
+            <button class="btn btn__activate">Подключить</button>
+            <button class="btn btn__consultation">Получить консультацию</button>
+        </div>
+    </div>
+  </div>
+</div>`
+const companyContent = `
+<div class="module-prices__content">
+  <div class="module-prices__content-features">
+      <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
+      <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
+      <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+  </div>
+  <div class="wrapper">
+      <div class="module-prices__content-services">
+          <ul>
+              <li class="list-item open-sans-16">Налоговый учет</li>
+              <li class="list-item open-sans-16">Подготовка отчетности</li>
+              <li class="list-item open-sans-16">Учет первичной документации по расходам</li>
+              <li class="list-item open-sans-16">Формирование платежных поручений</li>
+              <li class="list-item open-sans-16">Общение с налоговой</li>
+          </ul>
+      </div>
+      <div class="module-prices__content-benefits content-benefits">
+          <div class="content-benefits__title ">
+              <p class="open-sans-16 open-sans-16_bold">Бонус!</p>
+              <img src="icons/benefit.png" alt="benefit">
+          </div>
+          <div class="content-benefits__content">
+              <p class="open-sans-16">Бесплатный экспресс-аудит</p>
+              <p class="open-sans-16">Консультации в чате без ограничений</p>
+          </div>
+      </div>
+  </div>
+  <div class="module-prices__prices">
+      <div class="module-prices__monthly monthly">
+          <div class="monthly__month">
+              <p class="month">месяц</p>
+              <p class="price">15 000 ₽</p>
+          </div>
+          <div class="buttons__wrapper">
+              <button class="btn btn__activate">Подключить</button>
+              <button class="btn btn__consultation">Получить консультацию</button>
+          </div>
+      </div>
+      <div class="module-prices__quarterly">
+          <div class="monthly__quarter">
+              <p class="month">месяц</p>
+              <p class="price">15 000 ₽</p>
+              <p class="extra-info">при оплате за квартал</p>
+          </div>
+          <div class="buttons__wrapper">
+              <button class="btn btn__activate">Подключить</button>
+              <button class="btn btn__consultation">Получить консультацию</button>
+          </div>
+      </div>
+  </div>
+</div>`
+
+/* нажатие на текущую - включает текущую и выключает остальные
++класс актив */
+function changeTypeOfPrices(type) {
+  btnIncome.classList.remove('active')
+  btnCompany.classList.remove('active')
+  btnIncomeCosts.classList.remove('active')
+  if (type === 'income') {
+    btnIncome.classList.add('active');
+  } else if (type === 'company') {
+    btnCompany.classList.add('active');
+  } else if (type === 'incomeCosts') {
+    btnIncomeCosts.classList.add('active');
+  }
+  changeModuleContent()
+}
+function changeModuleContent() {
+  let currentPricesContent = document.querySelector('.module-prices__content')
+  currentPricesContent.remove()
+  if (btnIncome.classList.contains('active')) {
+  modulePrices.insertAdjacentHTML('beforeend', incomeContent)
+  }
+  if (btnCompany.classList.contains('active')) {
+    modulePrices.insertAdjacentHTML('beforeend', companyContent)
+  }
+  if (btnIncomeCosts.classList.contains('active')) {
+    modulePrices.insertAdjacentHTML('beforeend', incomeCostsContent)
+  }
+}
+
+btnIncome.addEventListener('click', () => changeTypeOfPrices('income'))
+btnCompany.addEventListener('click', () => changeTypeOfPrices('company'))
+btnIncomeCosts.addEventListener('click', () => changeTypeOfPrices('incomeCosts'))
+
+
+
