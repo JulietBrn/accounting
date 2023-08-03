@@ -327,7 +327,7 @@
                 
             </section>
             <!-- Модальное окно. Подключить тариф ОСНО. -->
-            <div class="modal" id="modal-put-on-service-VAT">
+            <div class="modal hidden" id="modal-put-on-service-VAT">
                 <button class="modal__close-modal close-modal">×</button>
                 <p class="modal__title">Подключить тариф</p>
                 <div class="modal__wrapper">
@@ -382,6 +382,42 @@
                             <input class="form-input" type="tel" id="phone-tariff-no-VAT" placeholder="Номер телефона">
                             <label for="email-tariff"></label>
                             <input class="form-input" type="email" id="email-tariff-no-VAT" placeholder="Электронная почта">
+                            <div class="modal__button-wrapper">
+                                <button class="btn btn__send">Отправить</button>
+                                <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Модальное окно. Заказать услугу. -->
+            <div class="modal hidden" id="modal-order-service">
+                <button class="modal__close-modal close-modal">×</button>
+                <p class="modal__title">Заказать услугу</p>
+                <div class="modal__wrapper">
+                    <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                    <form action="">
+                        <div class="modal__radio-wrapper">
+                            <div class="modal__vat-type">
+                                <input class="modal__radio-input" id="order-accountant-service" type="checkbox" name="tariff-type" checked>
+                                <label class="modal__radio-label" for="order-accountant-service">Бухгалтерия</label>
+                                <input class="modal__radio-input" id="order-tax-consult" type="checkbox" name="tariff-type" >
+                                <label class="modal__radio-label" for="order-tax-consult">Налоговые консультации</label>
+                                <input class="modal__radio-input" id="order-hr" type="checkbox" name="tariff-type">
+                                <label class="modal__radio-label" for="order-hr">Кадровое делопроизводство</label>
+                                <input class="modal__radio-input" id="order-audit" type="checkbox" name="tariff-type">
+                                <label class="modal__radio-label" for="order-audit">Аудит</label>
+                            </div>
+                        </div>
+                        <div class="modal__message-form-wrapper">
+                            <label for="name-order-service"></label>
+                            <input class="form-input" type="text" id="name-order-service" placeholder="Ваше имя">
+                            <label for="phone-order-service"></label>
+                            <input class="form-input" type="tel" id="phone-order-service" placeholder="Номер телефона">
+                            <label for="email-order-service"></label>
+                            <input class="form-input" type="email" id="email-order-service" placeholder="Электронная почта">
+                            <label for="message-order-service"></label>
+                            <input class="form-input" type="text" id="message-order-service" placeholder="Сообщение">
                             <div class="modal__button-wrapper">
                                 <button class="btn btn__send">Отправить</button>
                                 <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>

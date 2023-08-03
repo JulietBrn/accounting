@@ -441,7 +441,7 @@ li {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-.modal__message-form-wrapper #email-consultation, .modal__message-form-wrapper #message-consultation, .modal__message-form-wrapper #email-tariff, .modal__message-form-wrapper #email-tariff-no-VAT {
+.modal__message-form-wrapper #email-consultation, .modal__message-form-wrapper #message-consultation, .modal__message-form-wrapper #email-tariff, .modal__message-form-wrapper #email-tariff-no-VAT, .modal__message-form-wrapper #message-order-service, .modal__message-form-wrapper #email-order-service {
   grid-column: 1/-1;
 }
 .modal__message-form-wrapper label {
