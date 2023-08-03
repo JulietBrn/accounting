@@ -1,0 +1,66 @@
+.modal
+    background-color: $white-color
+    max-width: 69.4rem
+    position: absolute
+    // top: 0
+    // bottom: 0
+    // right: 0
+    // left: 0
+    // margin: auto
+    top: 70%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 6.4rem 6.6rem 7.25rem 6.6rem
+    z-index: 10
+    &__close-modal
+        cursor: pointer
+        position: absolute
+        background-color: $white-color
+        border: none
+        font-size: 4rem
+        top: 3rem
+        right: 3rem
+        padding: .5rem
+    &__radio-wrapper
+        display: flex
+        margin-bottom: 3rem
+        gap: 8rem
+        label
+            font-family: open sans, sans-serif
+            font-size: 1.6rem
+            font-style: normal
+            font-weight: 400
+        input
+            align-self: center
+    // &__radio-input
+    //     accent-color: $green-color
+    &__vat-type, &__company-type
+        display: grid
+        grid-template-columns: min-content max-content
+        row-gap: .8rem
+        column-gap: 1.4rem
+        align-items: start
+        align-content: start
+    &__title
+        font-family: Komet, sans-serif
+        font-size: 4rem
+        font-style: normal
+        font-weight: 900
+        line-height: 112.5%
+        margin-bottom: 4rem
+    &__wrapper
+    &__text
+        margin-bottom: 2rem
+    &__message-form-wrapper
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 2rem
+        #email-consultation, #message-consultation, #email-tariff, #email-tariff-no-VAT
+            grid-column: 1/-1
+        label
+            display: none
+    &__button-wrapper
+        display: flex
+        gap: 3rem
+        grid-column: 1/-1
+

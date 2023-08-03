@@ -5,8 +5,6 @@ const btnMore = document.querySelector('.btn__more')
 const btnWrapperMore = document.querySelector('.btn-wrapper__more')
 const reviewBox = document.querySelector('.reviews-section__box')
 
-console.log(btnMore);
-console.log(btnWrapperMore);
 function hiddenButton() {
     btnWrapperMore.style.display = 'none'
 }
@@ -45,11 +43,11 @@ function showMoreReviews() {
         <p class="review-card__review paragraph-text paragraph-text_normal">Обращались за консультацией по возмещению НДС по международным перевозкам. Удобно, что сотрудники всегда на связи, подробно объясняют и сопровождают весь процесс. В итоге всё получилось!</p>
     </div>`)
 }
-
+/* 
 btnMore.addEventListener('click', () => {
     showMoreReviews()
     hiddenButton()
-})
+}) */
 
 
 /* const btnOpenModal = document.querySelectorAll(".show-modal");
@@ -81,7 +79,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
  */
-
 
 /* Переключение ООО - ИП Д - ИП Д-Р */
 const btnCompany = document.querySelector('#btn-company')
@@ -233,7 +230,7 @@ const companyContent = `
       <div class="module-prices__quarterly">
           <div class="monthly__quarter">
               <p class="month">месяц</p>
-              <p class="price">15 000 ₽</p>
+              <p class="price">14 000 ₽</p>
               <p class="extra-info">при оплате за квартал</p>
           </div>
           <div class="buttons__wrapper">
@@ -243,6 +240,7 @@ const companyContent = `
       </div>
   </div>
 </div>`
+
 
 /* нажатие на текущую - включает текущую и выключает остальные
 +класс актив */
@@ -278,4 +276,38 @@ btnCompany.addEventListener('click', () => changeTypeOfPrices('company'))
 btnIncomeCosts.addEventListener('click', () => changeTypeOfPrices('incomeCosts'))
 
 
-
+let btnGetConsult = document.querySelectorAll('.btn__consultation')// это псевдомассив
+console.log(btnGetConsult);// тут несколько элементов, поэтому надо добавить FOR
+let modalGetConsult = document.querySelector('#modal-get-consultation')
+let body = document.querySelector('body')
+// open modal window
+for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
+    value.addEventListener('click', () => {
+        modalGetConsult.classList.remove('hidden')
+        document.querySelector('.overlay').classList.remove('hidden')
+        body.style.overflow = 'hidden'
+    })
+}
+// close with X
+let closeModal = document.querySelector('.close-modal')
+closeModal.addEventListener('click', () => {
+    modalGetConsult.classList.add('hidden')
+    document.querySelector('.overlay').classList.add('hidden')
+    body.style.overflow = 'auto'
+})
+// close with overlay
+document.querySelector('.overlay').addEventListener('click', () => {
+    modalGetConsult.classList.add('hidden')
+    document.querySelector('.overlay').classList.add('hidden')
+    body.style.overflow = 'auto'
+})
+// close with key 'Escape'
+document.addEventListener('keydown', function(event) {
+    console.log(event)
+    console.log(event.key)
+    if (event.key == 'Escape') {
+    modalGetConsult.classList.add('hidden')
+    document.querySelector('.overlay').classList.add('hidden')
+    body.style.overflow = 'auto'
+    }
+})

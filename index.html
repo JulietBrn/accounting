@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <div class="background-container"></div>
-        <header class="header-section">
-            <div class="nav-wrapper">
+        <header class="header-section mt-20px">
+            <div class="nav-wrapper mb-80px">
                 <div class="logo">
                     <a href="index.html"><img src="icons/logo.svg" alt="logo"></a>
                 </div>
@@ -38,66 +38,67 @@
                 <p class="our-team-section__text paragraph-text">Вы можете рассчитывать на надежную и квалифицированную помощь. В нашей команде — <span class="paragraph-text_bold">опытные бухгалтеры, квалифицированные налоговые консультанты, практикующие аудиторы.</span></p>
                 <div class="coworkers-box">
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-1.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-1.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Виктория</p>
                             <p class="coworker__job">Бухгалтер, аудитор</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-2.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-2.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Ирина</p>
                             <p class="coworker__job">Главный бухгалтер</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-3.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-3.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Егор</p>
                             <p class="coworker__job">Специалист по кадрам</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-4.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-4.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Анастасия</p>
                             <p class="coworker__job">Специалист по кадрам</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-5.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-5.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Екатерина</p>
                             <p class="coworker__job">Бухгалтер, аудитор</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-6.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-6.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Роман</p>
                             <p class="coworker__job">Аудитор</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-7.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-7.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Дмитрий</p>
                             <p class="coworker__job">Налоговый консультант</p>
-                        </div>
+                        </figcaption>
                     </div>
                     <div class="coworker">
-                        <img class="coworker__img" src="img/coworker-8.jpg" alt="coworker">
-                        <div class="coworker__description">
+                        <img class="coworker__img" src="img/coworkerC-8.jpg" alt="coworker">
+                        <figcaption class="coworker__description">
                             <p class="coworker__name">Егор</p>
                             <p class="coworker__job">Аудитор, налоговый консультант</p>
-                        </div>
+                        </figcaption>
                     </div>
                 </div>
                 <div class="btn-wrapper">
                     <button class="btn btn__consultation">Получить консультацию</button>
+
                 </div>
-                
+
             </section>
             <section class="services-section">
                 <h2 class="services-section__title second-title">Профессиональное сопровождение вашего бизнеса</h2>
@@ -253,7 +254,7 @@
                     </div>
                 </div>
                 <div class="module-prices__btn-wrapper">
-                    <a href="цены" class="btn">Все цены и тарифы →</a>
+                    <a href="prices.html" class="btn">Все цены и тарифы →</a>
                 </div>
             </section>
             <section class="reviews-section">
@@ -325,11 +326,118 @@
                 </div>
                 
             </section>
+            <!-- Модальное окно. Подключить тариф ОСНО. -->
+            <div class="modal" id="modal-put-on-service-VAT">
+                <button class="modal__close-modal close-modal">×</button>
+                <p class="modal__title">Подключить тариф</p>
+                <div class="modal__wrapper">
+                    <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                    <form action="">
+                        <div class="modal__radio-wrapper">
+                            <div class="modal__vat-type">
+                                <input class="modal__radio-input" id="basic-tariff" type="radio" name="tariff-type" checked>
+                                <label class="modal__radio-label" for="basic-tariff">Базовый</label>
+                                <input class="modal__radio-input" id="explore-tariff" type="radio" name="tariff-type" >
+                                <label class="modal__radio-label" for="explore-tariff">Расширенный</label>
+                                <input class="modal__radio-input" id="vip-tariff" type="radio" name="tariff-type">
+                                <label class="modal__radio-label" for="vip-tariff">Премиум</label>
+                            </div>
+                        </div>
+                        <div class="modal__message-form-wrapper">
+                            <label for="name-tariff"></label>
+                            <input class="form-input" type="text" id="name-tariff" placeholder="Ваше имя">
+                            <label for="phone-tariff"></label>
+                            <input class="form-input" type="tel" id="phone-tariff" placeholder="Номер телефона">
+                            <label for="email-tariff"></label>
+                            <input class="form-input" type="email" id="email-tariff" placeholder="Электронная почта">
+                            <div class="modal__button-wrapper">
+                                <button class="btn btn__send">Отправить</button>
+                                <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Модальное окно. Подключить тариф УСН. -->
+            <div class="modal hidden" id="modal-put-on-service-no-VAT">
+                <button class="modal__close-modal close-modal">×</button>
+                <p class="modal__title">Подключить тариф</p>
+                <div class="modal__wrapper">
+                    <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                    <form action="">
+                        <div class="modal__radio-wrapper">
+                            <div class="modal__vat-type">
+                                <input class="modal__radio-input" id="no-vat-tariff-income" type="radio" name="tariff-type" checked>
+                                <label class="modal__radio-label" for="no-vat-tariff-income">УСН Доходы</label>
+                                <input class="modal__radio-input" id="no-vat-tariff-costs" type="radio" name="tariff-type" >
+                                <label class="modal__radio-label" for="no-vat-tariff-costs">УСН Доходы-Расходы</label>
+                                <input class="modal__radio-input" id="automatic-tariff" type="radio" name="tariff-type">
+                                <label class="modal__radio-label" for="automatic-tariff">АУСН</label>
+                            </div>
+                        </div>
+                        <div class="modal__message-form-wrapper">
+                            <label for="name-tariff"></label>
+                            <input class="form-input" type="text" id="name-tariff-no-VAT" placeholder="Ваше имя">
+                            <label for="phone-tariff"></label>
+                            <input class="form-input" type="tel" id="phone-tariff-no-VAT" placeholder="Номер телефона">
+                            <label for="email-tariff"></label>
+                            <input class="form-input" type="email" id="email-tariff-no-VAT" placeholder="Электронная почта">
+                            <div class="modal__button-wrapper">
+                                <button class="btn btn__send">Отправить</button>
+                                <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer class="footer-section">
             <p>information</p>
         </footer>
+        <!-- Модальное окно. Получить консультацию. -->
+        <div class="modal hidden" id="modal-get-consultation">
+            <button class="modal__close-modal close-modal">×</button>
+            <p class="modal__title">Получить консультацию</p>
+            <div class="modal__wrapper">
+                <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p>
+                <form action="">
+                    <div class="modal__radio-wrapper">
+                        <div class="modal__vat-type">
+                            <input class="modal__radio-input" id="no-vat" type="radio" name="vat-type" checked>
+                            <label class="modal__radio-label" for="no-vat">УСН</label>
+                            <input class="modal__radio-input" id="vat" type="radio" name="vat-type" >
+                            <label class="modal__radio-label" for="vat">ОСНО</label>
+                            <input class="modal__radio-input" id="automatic" type="radio" name="vat-type">
+                            <label class="modal__radio-label" for="automatic">АУСН</label>
+                        </div>
+                        <div class="modal__company-type">
+                            <input class="modal__radio-input" id="company" type="radio" name="company-type" checked="">
+                            <label class="modal__radio-label" for="company">ООО</label>
+                            <input class="modal__radio-input" id="no-company" type="radio" name="company-type">
+                            <label class="modal__radio-label" for="no-company">ИП</label>
+                        </div>
+                    </div>
+                    <div class="modal__message-form-wrapper">
+                        <label for="name-consultation"></label>
+                        <input class="form-input" type="text" id="name-consultation" placeholder="Ваше имя">
+                        <label for="phone-consultation"></label>
+                        <input class="form-input" type="tel" id="phone-consultation" placeholder="Номер телефона">
+                        <label for="email-consultation"></label>
+                        <input class="form-input" type="email" id="email-consultation" placeholder="Электронная почта">
+                        <label for="message-consultation"></label>
+                        <input class="form-input" type="text" id="message-consultation" placeholder="Сообщение">
+                        <div class="modal__button-wrapper">
+                            <button class="btn btn__send">Отправить</button>
+                            <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="overlay hidden"></div> -->
+        
     </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

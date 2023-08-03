@@ -9,7 +9,7 @@
     <meta name="description" content="Бухгалтерские услуги, консультации, аудит, кадровое делопроизводство">
 </head>
 <body>
-    <div class="prices-container">
+    <div class="prices-container mt-20px prices-page">
         <div class="nav-wrapper">
             <div class="logo">
                 <a href="index.html"><img src="icons/logo.svg" alt="logo"></a>
@@ -26,13 +26,13 @@
         <div class="">
             <h2 class="second-title prices-section__title">Тарифы на сопровождение для ОСНО</h2>
             <!-- компонент тарифы -->
-            <div class="module-prices__wrapper module-prices">
+            <div class=" module-prices module-prices__vat">
                 <div class="module-prices__header">
                     <p class="header-cell active" id="btn-basic">Базовый</p>
                     <p class="header-cell" id="btn-explore">Расширенный</p>
                     <p class="header-cell" id="btn-vip">Премиум</p>
                 </div>
-                <div class="module-prices__content">
+                <div class="module-prices__content module-prices__vat-content">
                     <div class="module-prices__content-features">
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
@@ -88,15 +88,15 @@
         <div class="">
             <h2 class="second-title prices-section__title">Тарифы на сопровождение для УСН</h2>
             <!-- компонент тарифы -->
-            <div class="module-prices__wrapper module-prices">
+            <div class=" module-prices module-prices__no-vat">
                 <div class="module-prices__header">
-                    <p class="header-cell active" id="btn-income">УСН Доходы</p>
-                    <p class="header-cell" id="btn-income-minus-costs">УСН Доходы-Расходы</p>
+                    <p class="header-cell active" id="btn-income-no-vat">УСН Доходы</p>
+                    <p class="header-cell" id="btn-income-minus-costs-no-vat">УСН Доходы-Расходы</p>
                     <p class="header-cell" id="btn-automatic">АУСН</p>
                 </div>
-                <div class="module-prices__content">
+                <div class="module-prices__content module-prices__no-vat-content">
                     <div class="module-prices__content-features">
-                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
+                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
                     </div>
@@ -149,27 +149,159 @@
         <div class="single-services">
             <h2 class="second-title prices-section__title">Разовые услуги</h2>
             <div class="single-services__wrapper">
-                <div class="single-services__accounting service-card">
-                    <p class="service-card__title">Бухгалтерия</p>
+                <div class="single-services service-card">
+                    <p class="service-card__title paragraph-text paragraph-text_bold">Бухгалтерия</p>
                     <div class="service-card__services">
                         <div class="service-card__services-item">
-                            <p>Восстановление бухгалтерского учета</p>
-                            <p>15 000 ₽</p>
-                            <p>за месяц</p>
+                            <p class="service-card__description">Восстановление бухгалтерского учета</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                                <p class="service-card__unit">за месяц</p>
+                            </div>
                         </div>
                         <div class="service-card__services-item">
-                            <p>Оптимизация системы учета затрат и доходов</p>
-                            <p>20 000 ₽</p>
+                            <p class="service-card__description">Оптимизация системы учета затрат и доходов</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">20 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Помощь в подготовке и сопровождении проверок со стороны налоговых органов</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">4 000 ₽</p>
+                                <p class="service-card__unit">за одно требование</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Разработка и внедрение учетной политики</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">12 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Внедрение автоматизированных систем учета и отчетности</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Подготовка и анализ отчетности для руководства компании</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Анализ финансового состояния и разработка финансовой стратегии</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Разработка и внедрение системы управленческого учета</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">25 000 ₽</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="single-services__tax-consultations">Налоговые консультации</div>
-                <div class="single-services__staff-management">Кадровое делопроизводство</div>
-                <div class="single-services__audit">Аудит</div>
+                <div class="single-services service-card">
+                    <p class="service-card__title paragraph-text paragraph-text_bold">Налоговые консультации</p>
+                    <div class="service-card__services">
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Консультации по оптимизации налоговых выплат и применению налоговых льгот</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">10 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Консультация по налоговым вопросам и оптимизации налогообложения</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">5 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Консультации по вопросам международного налогообложения</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">7 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Подготовка и анализ инвестиционных проектов</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-services service-card">
+                    <p class="service-card__title paragraph-text paragraph-text_bold">Кадровое делопроизводство</p>
+                    <div class="service-card__services">
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Разработка типовой формы трудового договора</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">4 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Восстановление личного дела сотрудника (Приказы о приеме, отпусках, больничных, трудовой договор, дополнительные соглашения, личная карточка)</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">5 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Приказы для отпуска по уходу за ребенком</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">3 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Оформление трудовых отношений с иностранцами</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">5 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Консультация по работе с самозанятыми</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">3 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-services service-card">
+                    <p class="service-card__title paragraph-text paragraph-text_bold">Аудит</p>
+                    <div class="service-card__services">
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Аудит и проверка финансовой отчетности</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Оценка бизнеса и активов</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">20 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Аудит налоговых рисков и проверка правильности расчета налоговых обязательств</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">15 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="service-card__services-item">
+                            <p class="service-card__description">Анализ и оптимизация финансовых потоков</p>
+                            <div class="service-card__price-conteiner">
+                                <p class="service-card__price">20 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="single-services__buttons-wrapper">
-                <button class="btn btn__order"></button>
-                <button class="btn btn__consultation"></button>
+                <button class="btn btn__order">Заказать</button>
+                <button class="btn btn__consultation">Получить консультацию</button>
             </div>
         </div>
         <section class="contacts-section">
@@ -204,6 +336,6 @@
         <footer></footer>
     </div>
 
-    
+    <script src="js/prices.js"></script>
 </body>
 </html>

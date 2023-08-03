@@ -1,5 +1,4 @@
 .module-prices
-    
     &__header
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -21,9 +20,7 @@
             background-color: $green-color
         &>p:not(:last-child)
             border-right: none
-        &>p:first-child
-            padding-top: calc( (7.9rem - 2.11rem)/2 )
-            padding-bottom: calc( (7.9rem - 2.11rem)/2 )
+        
     &__content
         width: 83%
         background-color: $gray-color
@@ -80,13 +77,10 @@
         font-size: 3.6rem   
     .extra-info
         font-weight: 400
+.main-container .module-prices__header 
+    &>p:first-child
+        padding-top: calc( (7.9rem - 2.11rem)/2 )
+        padding-bottom: calc( (7.9rem - 2.11rem)/2 )
 
-.open-sans-16
-    font-family: open sans, sans-serif
-    font-size: 1.6rem
-    font-style: normal
-    font-weight: 400
-    line-height: 112.5%
 
-.open-sans-16_bold
-    font-weight: 700
+
