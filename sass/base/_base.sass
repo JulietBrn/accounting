@@ -6,9 +6,11 @@
 
 html
     font-size: 62.5%
+    scroll-behavior: smooth
 
 a
     text-decoration: none
+    
 li 
     list-style: none
 //     @include respond(tab-land)
@@ -48,6 +50,12 @@ li
     
 .prices-container > *
     grid-column: 2/3
-
+    
+.services-container
+    display: grid
+    grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr)
+.services-container> *
+    grid-column: 2/3
+    
 .hidden
     display: none

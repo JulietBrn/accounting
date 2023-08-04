@@ -25,6 +25,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -59,6 +60,15 @@ li {
 }
 
 .prices-container > * {
+  grid-column: 2/3;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr);
+}
+
+.services-container > * {
   grid-column: 2/3;
 }
 
@@ -453,6 +463,33 @@ li {
   grid-column: 1/-1;
 }
 
+.success-submit {
+  position: relative;
+  width: 56.6rem;
+  height: 40.2rem;
+  background-color: #ffffff;
+  border: 1px solid;
+}
+.success-submit__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-submit__img {
+  max-width: 8.4rem;
+  margin-bottom: 5.2rem;
+}
+.success-submit .text-title {
+  margin-bottom: 2rem;
+}
+.success-submit__text {
+  text-align: center;
+}
+
 /* Компонент кнопки */
 .btn {
   cursor: pointer;
@@ -495,6 +532,42 @@ li {
   padding: 2rem 6rem;
 }
 
+.s-page-card {
+  background-color: #F2F2F2;
+  width: 100%;
+  padding: 4rem 5rem 5rem 5rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 80rem) min-content;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.s-page-card__title {
+  margin-bottom: 4rem;
+}
+.s-page-card__list {
+  margin-bottom: 3.6rem;
+  line-height: normal;
+}
+.s-page-card__list-item {
+  background: url(../icons/small-green-tick.png) no-repeat;
+  padding-left: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+.s-page-card__descr {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 60rem;
+}
+.s-page-card__text {
+  line-height: 160%;
+}
+.s-page-card__img {
+  max-width: 30rem;
+  justify-self: end;
+  align-self: end;
+}
+
 .background-container {
   grid-column: 1/-1;
   grid-row: 1/2;
@@ -526,6 +599,11 @@ li {
 }
 .nav-list__item a {
   color: #000000;
+  font-family: Open Sans;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .welcome {
@@ -727,4 +805,19 @@ li {
   font-style: normal;
   font-weight: 400;
   line-height: 112.5%;
+}
+
+.services-container__contacts-section {
+  margin-bottom: 11rem;
+}
+.services-container__nav-wrapper {
+  margin-bottom: 10rem;
+}
+.services-container__btn-wrapper {
+  margin-bottom: 11rem;
+}
+.services-container .cards-wrapper {
+  display: grid;
+  row-gap: 11rem;
+  margin-bottom: 5rem;
 }/*# sourceMappingURL=style.css.map */
