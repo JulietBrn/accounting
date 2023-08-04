@@ -549,7 +549,7 @@ li {
   line-height: normal;
 }
 .s-page-card__list-item {
-  background: url(../icons/small-green-tick.png) no-repeat;
+  background: url(../icons/small-green-tick.png) no-repeat left center;
   padding-left: 2.4rem;
   margin-bottom: 0.5rem;
 }
