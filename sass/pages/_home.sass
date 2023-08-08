@@ -29,8 +29,18 @@
 
 
 .advantages-section
+    position: relative
     background-color: $gray-color
     padding: 10rem 0 11rem 0
+    &__wrapper
+        position: absolute
+        left: 0
+        top: 0
+        background-color: $gray-color
+        width: 100%
+        height: 100%
+        transform: scaleX(2)
+        z-index: -1
     &__title
         margin-bottom: 3.6rem
     &__text
@@ -56,8 +66,18 @@
         text-align: center
     
 .reviews-section
+    position: relative
     background-color: $gray-color
     padding-top: 10rem
+    &__wrapper
+        position: absolute
+        left: 0
+        top: 0
+        background-color: $gray-color
+        width: 100%
+        height: 100%
+        transform: scaleX(2)
+        z-index: -1
     &__title
         margin-bottom: 7rem
     .btn-wrapper
@@ -90,8 +110,7 @@
         .paragraph-text_underline
             color: black
             border-bottom: 2px solid $green-color
-#message
-    height: 10rem
+
 
 .overlay
     position: absolute

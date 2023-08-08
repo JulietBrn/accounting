@@ -42,6 +42,7 @@ li {
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr);
   row-gap: 11rem;
   position: relative;
+  overflow: hidden;
 }
 
 .main-container {
@@ -384,12 +385,27 @@ li {
   padding: 2rem;
   padding-left: 2.5rem;
   background: #F2F2F2;
-  color: rgba(0, 0, 0, 0.45);
   font-family: open sans, sans-serif;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 112.5%;
+  line-height: normal;
+}
+.form-input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+.form-input:focus {
+  color: black;
+}
+
+#message {
+  height: 11rem;
+  padding-bottom: 6rem;
+  resize: vertical;
+  max-height: 20rem;
 }
 
 .modal {
@@ -495,7 +511,7 @@ li {
   cursor: pointer;
   color: #68D268;
   border: none;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   font-family: komet, sans-serif;
   font-size: 1.6rem;
   font-style: normal;
@@ -628,8 +644,59 @@ li {
 }
 
 .footer-section {
+  position: relative;
   grid-column: 2/3;
-  background-color: #939393;
+  padding: 6rem 0;
+}
+.footer-section__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(2);
+  z-index: -1;
+}
+.footer-section__contacts {
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 2rem;
+  margin-bottom: 8rem;
+}
+.footer-section__containers {
+  display: flex;
+  -moz-column-gap: 30rem;
+       column-gap: 30rem;
+}
+.footer-section__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.footer-section__list-item {
+  padding: 0.5rem;
+  color: #332A44;
+}
+.footer-section .footer-section__consult-btn, .footer-section .btn {
+  color: #332A44;
+  border-bottom: 2px solid #332A44;
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer-section__arrow-to-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.extra-info__item {
+  color: #C1C1C1;
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
 }
 
 .our-team-section {
@@ -667,8 +734,19 @@ li {
 }
 
 .advantages-section {
+  position: relative;
   background-color: #F2F2F2;
   padding: 10rem 0 11rem 0;
+}
+.advantages-section__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(2);
+  z-index: -1;
 }
 .advantages-section__title {
   margin-bottom: 3.6rem;
@@ -701,8 +779,19 @@ li {
 }
 
 .reviews-section {
+  position: relative;
   background-color: #F2F2F2;
   padding-top: 10rem;
+}
+.reviews-section__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(2);
+  z-index: -1;
 }
 .reviews-section__title {
   margin-bottom: 7rem;
@@ -742,10 +831,6 @@ li {
 .contacts-section .wrapper .paragraph-text_underline {
   color: black;
   border-bottom: 2px solid #68D268;
-}
-
-#message {
-  height: 10rem;
 }
 
 .overlay {
@@ -814,6 +899,7 @@ li {
   margin-bottom: 10rem;
 }
 .services-container__btn-wrapper {
+  margin: 0 auto;
   margin-bottom: 11rem;
 }
 .services-container .cards-wrapper {

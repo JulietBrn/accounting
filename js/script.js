@@ -43,11 +43,12 @@ function showMoreReviews() {
         <p class="review-card__review paragraph-text paragraph-text_normal">Обращались за консультацией по возмещению НДС по международным перевозкам. Удобно, что сотрудники всегда на связи, подробно объясняют и сопровождают весь процесс. В итоге всё получилось!</p>
     </div>`)
 }
-/* 
-btnMore.addEventListener('click', () => {
+
+btnMore.addEventListener('click', (e) => {
+    e.preventDefault()
     showMoreReviews()
     hiddenButton()
-}) */
+})
 
 
 /* const btnOpenModal = document.querySelectorAll(".show-modal");
@@ -282,7 +283,8 @@ let modalGetConsult = document.querySelector('#modal-get-consultation')
 let body = document.querySelector('body')
 // open modal window
 for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
-    value.addEventListener('click', () => {
+    value.addEventListener('click', (e) => {
+        e.preventDefault()
         modalGetConsult.classList.remove('hidden')
         document.querySelector('.overlay').classList.remove('hidden')
         body.style.overflow = 'hidden'
@@ -290,21 +292,23 @@ for (let value of btnGetConsult) { //для каждого элемента из
 }
 // close with X
 let closeModal = document.querySelector('.close-modal')
-closeModal.addEventListener('click', () => {
+closeModal.addEventListener('click', (e) => {
+    e.preventDefault()
     modalGetConsult.classList.add('hidden')
     document.querySelector('.overlay').classList.add('hidden')
     body.style.overflow = 'auto'
 })
 // close with overlay
-document.querySelector('.overlay').addEventListener('click', () => {
+/* document.querySelector('.overlay').addEventListener('click', () => {
     modalGetConsult.classList.add('hidden')
     document.querySelector('.overlay').classList.add('hidden')
     body.style.overflow = 'auto'
-})
+}) */
 // close with key 'Escape'
 document.addEventListener('keydown', function(event) {
     console.log(event)
     console.log(event.key)
+
     if (event.key == 'Escape') {
     modalGetConsult.classList.add('hidden')
     document.querySelector('.overlay').classList.add('hidden')

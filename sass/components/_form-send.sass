@@ -9,9 +9,17 @@
     padding: 2rem
     padding-left: 2.5rem
     background: $gray-color
-    color: rgba(0, 0, 0, 0.45)
     font-family: open sans, sans-serif
     font-size: 1.6rem
     font-style: normal
     font-weight: 500
-    line-height: 112.5%
+    line-height: normal
+    &::placeholder 
+        color: rgba(0, 0, 0, 0.45)
+    &:focus
+        color: black
+#message
+    height: 11rem
+    padding-bottom: 6rem
+    resize: vertical
+    max-height: 20rem

@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="background-container"></div>
-        <header class="header-section mt-20px">
+        <header class="header-section mt-20px" id="header">
             <div class="nav-wrapper mb-80px">
                 <div class="logo">
                     <a href="index.html"><img src="icons/logo.svg" alt="logo"></a>
@@ -33,7 +33,7 @@
             
         </header>
         <main class="main-container">
-            <section class="our-team-section">
+            <section class="our-team-section" id="our-team">
                 <h2 class="our-team-section__title second-title">Больше, чем просто бухгалтерия</h2>
                 <p class="our-team-section__text paragraph-text">Вы можете рассчитывать на надежную и квалифицированную помощь. В нашей команде — <span class="paragraph-text_bold">опытные бухгалтеры, квалифицированные налоговые консультанты, практикующие аудиторы.</span></p>
                 <div class="coworkers-box">
@@ -156,6 +156,8 @@
                 </div>
             </section>
             <section class="advantages-section">
+                <div class="advantages-section__wrapper">
+                </div>
                 <h2 class="advantages-section__title second-title">Преимущества работы с нами</h2>
                 <p class="paragraph-text advantages-section__text">Комплексное бухгалтерское обслуживание дает вашей компании ряд преимуществ</p>
                 <div class="advantages-section__box">
@@ -189,8 +191,8 @@
                         <h4 class="box-item__title paragraph-text paragraph-text_bold">Конфиденциальность</h4>
                         <p class="box-item__description paragraph-text">Полная конфиденциальность, в том числе после прекращения сотрудничества.</p>
                     </div>
-
                 </div>
+                
             </section>
             <section class="prices-section">
                 <h2 class="second-title prices-section__title">Тарифы на сопровождение</h2>
@@ -257,7 +259,9 @@
                     <a href="prices.html" class="btn">Все цены и тарифы →</a>
                 </div>
             </section>
-            <section class="reviews-section">
+            <section class="reviews-section" id="reviews">
+                <div class="reviews-section__wrapper">
+                </div>
                 <h2 class="second-title reviews-section__title">Отзывы наших клиентов</h2>
                 <div class="reviews-section__box">
                     <div class="reviews-section__box-item review-card">
@@ -316,7 +320,7 @@
                             <label for="email"></label>
                             <input class="form-input" type="email" id="email" placeholder="Электронная почта">
                             <label for="message"></label>
-                            <input class="form-input" type="text" id="message" placeholder="Сообщение">
+                            <textarea class="form-input" type="text" id="message" placeholder="Сообщение"></textarea>
                             <div class="contacts-section__btn-wrapper">
                                 <button class="btn btn__send">Отправить</button>
                             </div>
@@ -426,7 +430,7 @@
                     </form>
                 </div>
             </div>
-            <div class="success-submit">
+            <div class="success-submit hidden">
                 <div class="success-submit__wrapper">
                     <img class="success-submit__img" src="icons/green-tick.svg" alt="green-tick">
                     <p class="success-submit__text text-title paragraph-text open-sans-16_italic paragraph-text_bold">Сообщение успешно отправлено!</p>
@@ -436,7 +440,45 @@
             </div>
         </main>
         <footer class="footer-section">
-            <p>information</p>
+            <div class="footer-section__wrapper">
+            </div>
+            <div class="footer-section__contacts">
+                <a href="index.html"><img src="icons/logo-dark.svg" alt="logo"></a>
+                <div class="footer-section__containers">
+                    <div class="footer-section__container">
+                        <ul class="open-sans-16 paragraph-text_normal">
+                            <li class="footer-section__list-item">ООО «Консалт»</li>
+                            <li class="footer-section__list-item">ИНН 78 564 780 936</li>
+                            <li class="footer-section__list-item"><a href="tel:+7(920)5316798">8 (920) 531 67 98</a></li>
+                            <li class="footer-section__list-item"><a href="mailto:info@colsult.com">info@colsult.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section__container">
+                        <button class="btn btn__consultation footer-section__consult-btn">Получить консультацию</button>
+                        <a href="prices.html" class="btn">Все цены и тарифы →</a>
+                    </div>
+                    <div class="footer-section__container">
+                        <ul class="open-sans-16 paragraph-text_normal">
+                            <li class="footer-section__list-item"><a href="services.html">Услуги</a></li>
+                            <li class="footer-section__list-item"><a href="index.html#reviews">Отзывы</a></li>
+                            <li class="footer-section__list-item"><a href="index.html#our-team">О нас</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-section__extra-info">
+                <ul>
+                    <li class="extra-info__item">© 2023</li>
+                    <li class="extra-info__item">Политика конфиденциальности</li>
+                    <li class="extra-info__item">Политика обработки персональных данных</li>
+                </ul>
+            </div>
+            <div class="footer-section__arrow-to-up"><a href="#header"><img src="icons/arrow-top.svg" alt="arrow-top"></a></div>
+            
+            
+
+            
         </footer>
         <!-- Модальное окно. Получить консультацию. -->
         <div class="modal hidden" id="modal-get-consultation">

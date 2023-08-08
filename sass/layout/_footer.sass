@@ -1,3 +1,44 @@
 .footer-section
+    position: relative
     grid-column: 2/3
-    background-color: $dark-gray-color
+    padding: 6rem 0
+    &__wrapper
+        position: absolute
+        left: 0
+        top: 0
+        background-color: $gray-color
+        width: 100%
+        height: 100%
+        transform: scaleX(2)
+        z-index: -1
+    &__contacts
+        grid-template-rows: repeat(2, min-content)
+        row-gap: 2rem
+        margin-bottom: 8rem
+    &__containers
+        display: flex
+        column-gap: 30rem
+    &__container
+        display: flex
+        flex-direction: column
+        row-gap: 1rem
+    &__list-item
+        padding: .5rem
+        color: #332A44
+    .footer-section__consult-btn, .btn
+        color: #332A44
+        border-bottom: 2px solid #332A44
+        padding-left: 0
+        padding-right: 0
+    &__arrow-to-up
+        position: absolute
+        top: 0
+        right: 0
+.extra-info__item
+    color: #C1C1C1
+    font-family: Open Sans
+    font-size: 1.6rem
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    margin-bottom: 1rem
