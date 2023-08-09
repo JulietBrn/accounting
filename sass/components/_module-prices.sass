@@ -31,7 +31,7 @@
         margin: 0 auto
     &__content-features
         display: grid
-        grid-template-columns: repeat(3, max-content)
+        grid-template-columns: repeat(3, minmax(13.5rem, max-content))
         gap: 3rem
     .content-benefits
         background-color: $white-color
@@ -47,7 +47,8 @@
             row-gap: 1rem
     .wrapper
         display: grid
-        grid-template-columns: minmax(max-content, .8fr) max-content
+        grid-template-columns: .8fr max-content
+        grid-template-rows: 12.5rem
         column-gap: 2rem
         align-items: start
         .list-item
@@ -65,8 +66,8 @@
             flex-direction: column
     &__monthly, &__quarterly
         display: grid
-        grid-template-columns: max-content max-content
-        column-gap: 4rem
+        grid-template-columns: 14.5rem max-content
+        column-gap: 3.5rem
     .monthly__month, .monthly__quarter
         font-family: komet, sans-serif
         font-size: 1.6rem
