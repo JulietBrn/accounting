@@ -11,7 +11,9 @@
     background-color: $gray-color
     grid-column: 2/3
 
-
+.logo img
+    @media (max-width: 480px) 
+        width: 14.7rem
 .nav-wrapper
     height: 7rem
     display: flex
@@ -19,7 +21,7 @@
     align-items: center
 .nav-list
     display: grid
-    grid-template-columns: repeat(4, min-content)
+    grid-template-columns: repeat(3, min-content)
     column-gap: 8rem
     &__item a
         color: $black-color
@@ -28,22 +30,57 @@
         font-style: normal
         font-weight: 600
         line-height: normal
+        @media (max-width: 480px) 
+            font-size: 1.6rem
+    @media (max-width: 1000px) 
+        column-gap: 4rem
+    @media (max-width: 768px)
+        grid-template-columns: repeat(1, min-content)
+        justify-items: end
+        gap: .5rem
+        #main-link
+            display: none
+
 
 .welcome
     position: relative
     &__main-title
-        margin-bottom: 7rem
+        margin-bottom: 7.5rem
         position: relative
         z-index: 1
+        @media (max-width: 1160px) 
+            margin-bottom: 5rem
+        @media (max-width: 768px) 
+            margin-bottom: 4rem
+            margin-top: 0
     &__text
         max-width: 51.6rem
         position: relative
         z-index: 1
+        @media (max-width: 1160px) 
+            max-width: 60%
+        @media (max-width: 768px) 
+            margin-bottom: 3rem
+            max-width: 100%
     &__img
         position: absolute
-        top: 2rem
-        right: 4rem
+        top: 9rem
+        right: 7rem
         z-index: 0
         max-width: 34%
+        @media (max-width: 1160px) 
+            top: 15rem
+            right: 1rem
+        @media (max-width: 768px) 
+            position: relative
+            top: 0
+            right: -10%
+            max-width: 50%
+            margin: 0 auto
+            margin-bottom: 10rem
+        @media (max-width: 480px) 
+            margin-bottom: 7rem
+
+
 
 

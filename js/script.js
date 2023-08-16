@@ -1,9 +1,23 @@
 
-/* Добавление новых карточек отзыва */
+/* Добавление новых карточек отзыва. Кнопка Показать еще */
 
 const btnMore = document.querySelector('.btn__more')
 const btnWrapperMore = document.querySelector('.btn-wrapper__more')
 const reviewBox = document.querySelector('.reviews-section__box')
+
+/* Модальные окна */
+const modalVAT = document.querySelector('#modal-put-on-service-VAT')
+const modalNoVAT = document.querySelector('#modal-put-on-service-no-VAT')
+const modalSuccessSubmit = document.querySelector('.success-submit')
+const modalGetConsult = document.querySelector('#modal-get-consultation')
+const modals = [modalGetConsult, modalVAT, modalNoVAT, modalSuccessSubmit]
+let btnGetConsult = document.querySelectorAll('.btn__consultation')
+let btnActiveTarif = document.querySelectorAll('.btn__activate')
+let btnSend = document.querySelectorAll('.btn__send')
+
+let timer
+
+let body = document.querySelector('body')
 
 function hiddenButton() {
     btnWrapperMore.style.display = 'none'
@@ -51,36 +65,6 @@ btnMore.addEventListener('click', (e) => {
 })
 
 
-/* const btnOpenModal = document.querySelectorAll(".show-modal");
-const modalWindow = document.querySelector(".modal");
-const btnCloseModal = document.querySelector(".close-modal");
-const overlay = document.querySelector(".overlay");
-
-for (let value of btnOpenModal) {
-  value.addEventListener("click", function () {
-    overlay.classList.toggle("hidden");
-    modalWindow.classList.toggle("hidden");
-  });
-}
-
-btnCloseModal.addEventListener("click", function () {
-  overlay.classList.toggle("hidden");
-  modalWindow.classList.toggle("hidden");
-});
-
-overlay.addEventListener("click", function () {
-  overlay.classList.toggle("hidden");
-  modalWindow.classList.toggle("hidden");
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key == "Escape" && !modalWindow.classList.contains("hidden")) {
-    overlay.classList.toggle("hidden");
-    modalWindow.classList.toggle("hidden");
-  }
-});
- */
-
 /* Переключение ООО - ИП Д - ИП Д-Р */
 const btnCompany = document.querySelector('#btn-company')
 const btnIncome = document.querySelector('#btn-income')
@@ -91,7 +75,7 @@ const incomeContent = `
   <div class="module-prices__content-features">
     <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
     <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
   </div>
   <div class="wrapper">
     <div class="module-prices__content-services">
@@ -142,7 +126,7 @@ const incomeCostsContent = `
   <div class="module-prices__content-features">
     <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
     <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
+    <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот не важен</p>
   </div>
   <div class="wrapper">
     <div class="module-prices__content-services">
@@ -194,7 +178,7 @@ const companyContent = `
   <div class="module-prices__content-features">
       <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
       <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-      <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+      <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
   </div>
   <div class="wrapper">
       <div class="module-prices__content-services">
@@ -242,76 +226,136 @@ const companyContent = `
   </div>
 </div>`
 
-
 /* нажатие на текущую - включает текущую и выключает остальные
 +класс актив */
 function changeTypeOfPrices(type) {
-  btnIncome.classList.remove('active')
-  btnCompany.classList.remove('active')
-  btnIncomeCosts.classList.remove('active')
-  if (type === 'income') {
-    btnIncome.classList.add('active');
-  } else if (type === 'company') {
-    btnCompany.classList.add('active');
-  } else if (type === 'incomeCosts') {
-    btnIncomeCosts.classList.add('active');
-  }
-  changeModuleContent()
+    btnIncome.classList.remove('active')  
+    btnCompany.classList.remove('active')
+    btnIncomeCosts.classList.remove('active')
+    if (type === 'income') {
+        btnIncome.classList.add('active');
+    } else if (type === 'company') {
+        btnCompany.classList.add('active');
+    } else if (type === 'incomeCosts') {
+        btnIncomeCosts.classList.add('active');
+    }
+    changeModuleContent()
+    getBtnsConsult()
+    getBtnsActiveTarif()
+    openModalCons()
+    openModalActivate()
 }
+
 function changeModuleContent() {
-  let currentPricesContent = document.querySelector('.module-prices__content')
-  currentPricesContent.remove()
-  if (btnIncome.classList.contains('active')) {
-  modulePrices.insertAdjacentHTML('beforeend', incomeContent)
-  }
-  if (btnCompany.classList.contains('active')) {
-    modulePrices.insertAdjacentHTML('beforeend', companyContent)
-  }
-  if (btnIncomeCosts.classList.contains('active')) {
-    modulePrices.insertAdjacentHTML('beforeend', incomeCostsContent)
-  }
+    let currentPricesContent = document.querySelector('.module-prices__content')
+    currentPricesContent.remove()
+    if (btnIncome.classList.contains('active')) {
+    modulePrices.insertAdjacentHTML('beforeend', incomeContent)
+    }
+    if (btnCompany.classList.contains('active')) {
+        modulePrices.insertAdjacentHTML('beforeend', companyContent)
+    }
+    if (btnIncomeCosts.classList.contains('active')) {
+        modulePrices.insertAdjacentHTML('beforeend', incomeCostsContent)
+    }
+    
 }
 
 btnIncome.addEventListener('click', () => changeTypeOfPrices('income'))
 btnCompany.addEventListener('click', () => changeTypeOfPrices('company'))
 btnIncomeCosts.addEventListener('click', () => changeTypeOfPrices('incomeCosts'))
 
+// /* Получить консультацию. Вызов модального окна */
 
-let btnGetConsult = document.querySelectorAll('.btn__consultation')// это псевдомассив
-console.log(btnGetConsult);// тут несколько элементов, поэтому надо добавить FOR
-let modalGetConsult = document.querySelector('#modal-get-consultation')
-let body = document.querySelector('body')
-// open modal window
-for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
-    value.addEventListener('click', (e) => {
-        e.preventDefault()
-        modalGetConsult.classList.remove('hidden')
-        document.querySelector('.overlay').classList.remove('hidden')
-        body.style.overflow = 'hidden'
-    })
+function getBtnsConsult() {
+    btnGetConsult = document.querySelectorAll('.btn__consultation')
 }
+console.log(timer);// open modal window
+function openModalCons() {
+    for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
+        value.addEventListener('click', (e) => {
+            e.preventDefault()
+            modalGetConsult.classList.remove('hidden')
+            document.querySelector('.overlay').classList.remove('hidden')
+            body.style.overflow = 'hidden'
+        })
+    }
+    getBtnsSend()
+}
+
+// /* Подключить тариф */
+
+function getBtnsActiveTarif() {
+    btnActiveTarif = document.querySelectorAll('.btn__activate')
+}
+function openModalActivate() {
+    for(let val of btnActiveTarif) {
+        val.addEventListener('click', (e) => {
+            e.preventDefault()
+            const activeElement = document.querySelector('.header-cell.active');
+            const modalToShow = activeElement.classList.contains('btn-company') ? modalVAT : modalNoVAT;
+            modalToShow.classList.remove('hidden');
+            document.querySelector('.overlay').classList.remove('hidden');
+            body.style.overflow = 'hidden';
+            getBtnsSend()
+        })
+    }
+    
+}
+
 // close with X
-let closeModal = document.querySelector('.close-modal')
-closeModal.addEventListener('click', (e) => {
-    e.preventDefault()
-    modalGetConsult.classList.add('hidden')
-    document.querySelector('.overlay').classList.add('hidden')
-    body.style.overflow = 'auto'
+let closeModal = document.querySelectorAll('.close-modal')
+console.log(closeModal);
+closeModal.forEach(val => {
+    val.addEventListener('click', (e) => {
+        e.preventDefault()
+        modals.forEach(modal => modal.classList.add('hidden'))
+        document.querySelector('.overlay').classList.add('hidden')
+        body.style.overflow = 'auto'
+    })
 })
 // close with overlay
-/* document.querySelector('.overlay').addEventListener('click', () => {
-    modalGetConsult.classList.add('hidden')
+document.querySelector('.overlay').addEventListener('click', () => {
+    modals.forEach(modal => modal.classList.add('hidden'))
     document.querySelector('.overlay').classList.add('hidden')
     body.style.overflow = 'auto'
-}) */
+})
 // close with key 'Escape'
 document.addEventListener('keydown', function(event) {
-    console.log(event)
-    console.log(event.key)
-
     if (event.key == 'Escape') {
-    modalGetConsult.classList.add('hidden')
-    document.querySelector('.overlay').classList.add('hidden')
-    body.style.overflow = 'auto'
-    }
+        modals.forEach(modal => modal.classList.add('hidden'))
+        document.querySelector('.overlay').classList.add('hidden')
+        body.style.overflow = 'auto'
+        }
 })
+openModalCons()
+openModalActivate()
+
+getBtnsSend()
+successSubmit()
+
+function getBtnsSend() {
+    btnSend = document.querySelectorAll('.btn__send')
+}
+function successSubmit() {
+    for(let val of btnSend) {
+        val.addEventListener('click', (e) => {
+            e.preventDefault()
+            console.log('Внутри функции successSubmit')
+            modalSuccessSubmit.classList.remove('hidden')
+            modalGetConsult.classList.add('hidden')
+            modalVAT.classList.add('hidden')
+            modalNoVAT.classList.add('hidden')
+            if(document.querySelector('.overlay').classList.contains('hidden')) {
+                document.querySelector('.overlay').classList.remove('hidden');
+                body.style.overflow = 'hidden';
+            }
+            timer = setTimeout(()=> {
+                modalSuccessSubmit.classList.add('hidden')
+                document.querySelector('.overlay').classList.add('hidden')
+                body.style.overflow = 'auto'
+            },4000)
+        }
+    )}
+    
+}

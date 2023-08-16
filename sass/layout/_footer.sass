@@ -2,6 +2,8 @@
     position: relative
     grid-column: 2/3
     padding: 6rem 0
+    @media (max-width: 480px)
+        padding-bottom: 5rem
     &__wrapper
         position: absolute
         left: 0
@@ -12,28 +14,43 @@
         transform: scaleX(2)
         z-index: -1
     &__contacts
+        display: grid
         grid-template-rows: repeat(2, min-content)
         row-gap: 2rem
         margin-bottom: 8rem
+
     &__containers
-        display: flex
-        column-gap: 30rem
+        display: grid
+        grid-template-columns: repeat(3, .9fr)
+        column-gap: 2rem
+        justify-items: start
+        @media(max-width: 768px)
+            grid-template-columns: repeat(2, .9fr)
+            row-gap: 2rem
     &__container
         display: flex
         flex-direction: column
         row-gap: 1rem
+        align-items: flex-start
+
     &__list-item
         padding: .5rem
         color: #332A44
+    &__link
+        color: #332A44 
     .footer-section__consult-btn, .btn
         color: #332A44
         border-bottom: 2px solid #332A44
         padding-left: 0
         padding-right: 0
+        text-align: start
     &__arrow-to-up
         position: absolute
         top: 0
         right: 0
+        @media (max-width: 480px)
+            opacity: .7
+
 .extra-info__item
     color: #C1C1C1
     font-family: Open Sans
@@ -42,3 +59,6 @@
     font-weight: 400
     line-height: normal
     margin-bottom: 1rem
+    @media (max-width: 480px)
+        font-size: 1.4rem
+        margin-bottom: 0.5rem

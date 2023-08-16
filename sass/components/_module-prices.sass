@@ -4,6 +4,16 @@
         grid-template-columns: repeat(3, 1fr)
         height: 8rem
         margin-bottom: 5rem
+        @media (max-width: 1000px) 
+            grid-template-columns: 1fr 1fr 1.3fr
+            margin-bottom: 4rem
+        @media (max-width: 768px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 6.8rem)
+            height: 13.5rem
+            #btn-income-minus-costs
+                grid-column: 1/-1
+                border-top: none
         .header-cell
             cursor: pointer
             align-self: center
@@ -16,23 +26,46 @@
             text-align: center
             padding-top: 2rem
             padding-bottom: 2rem
+            @media (max-width: 768px)
+                padding-top: 1.6rem
+                padding-bottom: 1.6rem
         .active
             background-color: $green-color
         &>p:not(:last-child)
             border-right: none
-        
+            @media (max-width: 768px)
+                border: .2rem solid $green-color
+        @media (max-width: 768px)
+            &>p:first-child
+                border-right: none
     &__content
         width: 83%
+        @media (max-width: 1280px) 
+            width: 100%
+        @media (max-width: 768px)
+            width: 44rem
+        @media (max-width: 480px)
+            width: 100%
+
         background-color: $gray-color
         display: grid
         grid-template-rows: repeat(3, min-content)
         row-gap: 3.3rem
         padding: 3rem
         margin: 0 auto
+        @media (max-width: 1000px) 
+            padding: 3rem 2rem
+            row-gap: 2.3rem
     &__content-features
         display: grid
         grid-template-columns: repeat(3, minmax(13.5rem, max-content))
         gap: 3rem
+        @media (max-width: 768px)
+            gap: 2rem
+            grid-template-columns: repeat(3, minmax(13rem, max-content))
+        @media (max-width: 480px)
+            gap: 1rem
+            grid-template-columns: 1fr
     .content-benefits
         background-color: $white-color
         padding: 1.5rem
@@ -51,6 +84,13 @@
         grid-template-rows: 12.5rem
         column-gap: 2rem
         align-items: start
+        @media (max-width: 1000px)
+            grid-template-columns: repeat(2, 33rem)
+            grid-template-rows: 15rem
+        @media (max-width: 768px)
+            grid-template-columns: repeat(1, max-content)
+            grid-template-rows: max-content
+            row-gap: 2rem
         .list-item
             background: url(../icons/point.png) no-repeat
             padding-left: 2rem
@@ -60,7 +100,13 @@
     &__prices
         display: grid
         grid-template-columns: repeat(2, 1fr)
-
+        column-gap: 4rem
+        @media (max-width: 1000px)
+            grid-template-columns: 1fr
+            justify-items: center
+            row-gap: 1.5rem
+        @media (max-width: 768px)
+            justify-items: start   
         .buttons__wrapper
             display: flex
             flex-direction: column
@@ -68,6 +114,10 @@
         display: grid
         grid-template-columns: 14.5rem max-content
         column-gap: 3.5rem
+    @media (max-width: 768px) 
+        &__monthly, &__quarterly
+            column-gap: 2.5rem
+
     .monthly__month, .monthly__quarter
         font-family: komet, sans-serif
         font-size: 1.6rem
@@ -82,6 +132,9 @@
     &>p:first-child
         padding-top: calc( (7.9rem - 2.11rem)/2 )
         padding-bottom: calc( (7.9rem - 2.11rem)/2 )
+        @media (max-width: 768px)
+            padding-top: calc( (7rem - 2rem)/2 )
+            padding-bottom: calc( (7rem - 2rem)/2 )
 
 
 

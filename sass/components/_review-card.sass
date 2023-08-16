@@ -6,6 +6,12 @@
     background: $white-color
     box-shadow: 0px 9px 30px 0px rgba(0, 0, 0, 0.30)
     height: min-content
+    transition: all .4s
+    @media(max-width: 768px)
+        gap: 1.5rem
+        padding: 2rem
+    @media(max-width: 480px)
+        grid-template-columns: minmax(1fr, 8rem) minmax(3fr, 56.5rem)
     &__img
         width: 8rem
         height: 8rem
@@ -18,3 +24,9 @@
         margin-bottom: .5rem
     &__client-name
         color: #858585
+    &:hover
+        transform: translateY(-.5rem)
+        transition: all .3s
+    @media(max-width: 768px)
+        &__client
+            max-width: 80%

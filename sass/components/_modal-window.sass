@@ -1,17 +1,13 @@
 .modal
     background-color: $white-color
-    max-width: 69.4rem
-    position: absolute
-    // top: 0
-    // bottom: 0
-    // right: 0
-    // left: 0
-    // margin: auto
-    top: 70%
+    opacity: 1
+    width: 69.4rem
+    position: fixed
+    top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     padding: 6.4rem 6.6rem 7.25rem 6.6rem
-    z-index: 10
+    z-index: 101
     &__close-modal
         cursor: pointer
         position: absolute
@@ -64,11 +60,14 @@
         grid-column: 1/-1
 
 .success-submit
-    position: relative
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
     width: 56.6rem
     height: 40.2rem
     background-color: $white-color
-    border: 1px solid
+    z-index: 102
     &__wrapper
         position: absolute
         top: 50%
