@@ -5,20 +5,6 @@ const btnMore = document.querySelector('.btn__more')
 const btnWrapperMore = document.querySelector('.btn-wrapper__more')
 const reviewBox = document.querySelector('.reviews-section__box')
 
-/* Модальные окна */
-const modalVAT = document.querySelector('#modal-put-on-service-VAT')
-const modalNoVAT = document.querySelector('#modal-put-on-service-no-VAT')
-const modalSuccessSubmit = document.querySelector('.success-submit')
-const modalGetConsult = document.querySelector('#modal-get-consultation')
-const modals = [modalGetConsult, modalVAT, modalNoVAT, modalSuccessSubmit]
-let btnGetConsult = document.querySelectorAll('.btn__consultation')
-let btnActiveTarif = document.querySelectorAll('.btn__activate')
-let btnSend = document.querySelectorAll('.btn__send')
-
-let timer
-
-let body = document.querySelector('body')
-
 function hiddenButton() {
     btnWrapperMore.style.display = 'none'
 }
@@ -56,6 +42,7 @@ function showMoreReviews() {
         </div>
         <p class="review-card__review paragraph-text paragraph-text_normal">Обращались за консультацией по возмещению НДС по международным перевозкам. Удобно, что сотрудники всегда на связи, подробно объясняют и сопровождают весь процесс. В итоге всё получилось!</p>
     </div>`)
+    reviewBox.style.marginBottom = '0rem'
 }
 
 btnMore.addEventListener('click', (e) => {
@@ -63,6 +50,19 @@ btnMore.addEventListener('click', (e) => {
     showMoreReviews()
     hiddenButton()
 })
+/* Модальные окна */
+const modalVAT = document.querySelector('#modal-put-on-service-VAT')
+const modalNoVAT = document.querySelector('#modal-put-on-service-no-VAT')
+const modalSuccessSubmit = document.querySelector('.success-submit')
+const modalGetConsult = document.querySelector('#modal-get-consultation')
+const modals = [modalGetConsult, modalVAT, modalNoVAT, modalSuccessSubmit]
+let btnGetConsult = document.querySelectorAll('.btn__consultation')
+let btnActiveTarif = document.querySelectorAll('.btn__activate')
+let btnSend = document.querySelectorAll('.btn__send')
+
+let timer
+
+let body = document.querySelector('body')
 
 
 /* Переключение ООО - ИП Д - ИП Д-Р */
@@ -276,6 +276,7 @@ function openModalCons() {
         value.addEventListener('click', (e) => {
             e.preventDefault()
             modalGetConsult.classList.remove('hidden')
+            modalGetConsult.classList.add('modal-m')
             document.querySelector('.overlay').classList.remove('hidden')
             body.style.overflow = 'hidden'
         })
@@ -295,6 +296,7 @@ function openModalActivate() {
             const activeElement = document.querySelector('.header-cell.active');
             const modalToShow = activeElement.classList.contains('btn-company') ? modalVAT : modalNoVAT;
             modalToShow.classList.remove('hidden');
+            modalToShow.classList.add('active-m')
             document.querySelector('.overlay').classList.remove('hidden');
             body.style.overflow = 'hidden';
             getBtnsSend()
@@ -309,21 +311,30 @@ console.log(closeModal);
 closeModal.forEach(val => {
     val.addEventListener('click', (e) => {
         e.preventDefault()
-        modals.forEach(modal => modal.classList.add('hidden'))
+        modals.forEach(modal => {
+            modal.classList.add('hidden')
+            modal.classList.remove('active-m')
+        })
         document.querySelector('.overlay').classList.add('hidden')
         body.style.overflow = 'auto'
     })
 })
 // close with overlay
 document.querySelector('.overlay').addEventListener('click', () => {
-    modals.forEach(modal => modal.classList.add('hidden'))
+    modals.forEach(modal => {
+        modal.classList.add('hidden')
+        modal.classList.remove('active-m')
+    })
     document.querySelector('.overlay').classList.add('hidden')
     body.style.overflow = 'auto'
 })
 // close with key 'Escape'
 document.addEventListener('keydown', function(event) {
     if (event.key == 'Escape') {
-        modals.forEach(modal => modal.classList.add('hidden'))
+        modals.forEach(modal => {
+            modal.classList.add('hidden')
+            modal.classList.remove('active-m')
+        })
         document.querySelector('.overlay').classList.add('hidden')
         body.style.overflow = 'auto'
         }
@@ -341,7 +352,6 @@ function successSubmit() {
     for(let val of btnSend) {
         val.addEventListener('click', (e) => {
             e.preventDefault()
-            console.log('Внутри функции successSubmit')
             modalSuccessSubmit.classList.remove('hidden')
             modalGetConsult.classList.add('hidden')
             modalVAT.classList.add('hidden')

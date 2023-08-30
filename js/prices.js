@@ -1,4 +1,3 @@
-
 /* СТРАНИЦА ЦЕНЫ и ТАРИФЫ */
 const modulePricesVat = document.querySelector('.module-prices__vat')
 const btnBasic = document.querySelector('#btn-basic')
@@ -19,15 +18,13 @@ btnVip.addEventListener('click', ()=> changeTypeOfPrices('vip', true))
 btnIncomeNoVat.addEventListener('click', ()=> changeTypeOfPrices('incomeNoVat', false))
 btnIncomeCostsNoVat.addEventListener('click', ()=> changeTypeOfPrices('incomeCostsNoVat', false))
 btnAutomatic.addEventListener('click', ()=> changeTypeOfPrices('automatic', false))
-console.log(btnIncomeNoVat);
-console.log(btnIncomeCostsNoVat);
-console.log(btnAutomatic);
+
 const basicContent = `
 <div class="module-prices__content module-prices__vat-content">
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -79,7 +76,7 @@ const exploreContent = `
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">40 сотрудников</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 60 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -131,7 +128,7 @@ const vipContent = `
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">100 сотрудников</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 150 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -184,7 +181,7 @@ const incomeNoVatCont = `
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -235,7 +232,7 @@ const incomeCostsNoVatCont = `
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -286,7 +283,7 @@ const automaticContent = `
     <div class="module-prices__content-features">
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
     </div>
     <div class="wrapper">
         <div class="module-prices__content-services">
@@ -359,8 +356,11 @@ function changeTypeOfPrices(type, vatStatus) {
             btnAutomatic.classList.add('active');
         }
     }
-    
     changeModuleContent(vatStatus)
+    getBtnsConsult()
+    getBtnsActiveTarif()
+    openModalCons()
+    openModalActivate()
 }
 
 function changeModuleContent(vatStatus) {
@@ -368,7 +368,6 @@ function changeModuleContent(vatStatus) {
 
     if (vatStatus === true) {
         currentPricesContent = document.querySelector('.module-prices__vat-content')
-        console.log(currentPricesContent);
         currentPricesContent.remove()
         if (btnBasic.classList.contains('active')) {
         modulePricesVat.insertAdjacentHTML('beforeend', basicContent)
@@ -393,3 +392,132 @@ function changeModuleContent(vatStatus) {
         }
     }
 }
+
+/* Модальные окна */
+const modalVAT = document.querySelector('#modal-put-on-service-VAT')
+const modalNoVAT = document.querySelector('#modal-put-on-service-no-VAT')
+const modalSuccessSubmit = document.querySelector('.success-submit')
+const modalGetConsult = document.querySelector('#modal-get-consultation')
+const modalOrderService = document.querySelector('#modal-order-service')
+const modals = [modalGetConsult, modalVAT, modalNoVAT,modalOrderService, modalSuccessSubmit]
+let btnGetConsult = document.querySelectorAll('.btn__consultation')
+let btnActiveTarif = document.querySelectorAll('.btn__activate')
+let btnSend = document.querySelectorAll('.btn__send')
+let btnOrder = document.querySelector('.btn__order')
+let timer
+
+let body = document.querySelector('body')
+
+// /* Получить консультацию. Вызов модального окна */
+
+function getBtnsConsult() {
+    btnGetConsult = document.querySelectorAll('.btn__consultation')
+}
+
+function openModalCons() {
+    for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
+        value.addEventListener('click', (e) => {
+            e.preventDefault()
+            modalGetConsult.classList.remove('hidden')
+            modalGetConsult.classList.add('modal-m')
+            document.querySelector('.overlay').classList.remove('hidden')
+            body.style.overflow = 'hidden'
+        })
+    }
+    getBtnsSend()
+}
+
+// /* Подключить тариф */
+
+function getBtnsActiveTarif() {
+    btnActiveTarif = document.querySelectorAll('.btn__activate')
+}
+function openModalActivate() {
+    for(let val of btnActiveTarif) {
+        val.addEventListener('click', (e) => {
+            e.preventDefault()
+            const activeElement = document.querySelector('.header-cell.active');
+            const modalToShow = activeElement.classList.contains('btn-company') ? modalVAT : modalNoVAT;
+            modalToShow.classList.remove('hidden');
+            modalToShow.classList.add('active-m')
+            document.querySelector('.overlay').classList.remove('hidden');
+            body.style.overflow = 'hidden';
+            getBtnsSend()
+        })
+    }
+    
+}
+// Заказать
+btnOrder.addEventListener('click', (e)=> {
+    e.preventDefault()
+    modalOrderService.classList.remove('hidden')
+    document.querySelector('.overlay').classList.remove('hidden');
+    body.style.overflow = 'hidden';
+})
+// close with X
+let closeModal = document.querySelectorAll('.close-modal')
+
+closeModal.forEach(val => {
+    val.addEventListener('click', (e) => {
+        e.preventDefault()
+        modals.forEach(modal => {
+            modal.classList.add('hidden')
+            modal.classList.remove('active-m')
+        })
+        document.querySelector('.overlay').classList.add('hidden')
+        body.style.overflow = 'auto'
+    })
+})
+// close with overlay
+document.querySelector('.overlay').addEventListener('click', () => {
+    modals.forEach(modal => {
+        modal.classList.add('hidden')
+        modal.classList.remove('active-m')
+    })
+    document.querySelector('.overlay').classList.add('hidden')
+    body.style.overflow = 'auto'
+})
+// close with key 'Escape'
+document.addEventListener('keydown', function(event) {
+    if (event.key == 'Escape') {
+        modals.forEach(modal => {
+            modal.classList.add('hidden')
+            modal.classList.remove('active-m')
+        })
+        document.querySelector('.overlay').classList.add('hidden')
+        body.style.overflow = 'auto'
+        }
+})
+openModalCons()
+openModalActivate()
+
+getBtnsSend()
+successSubmit()
+
+function getBtnsSend() {
+    btnSend = document.querySelectorAll('.btn__send')
+}
+function successSubmit() {
+    for(let val of btnSend) {
+        val.addEventListener('click', (e) => {
+            e.preventDefault()
+            modalSuccessSubmit.classList.remove('hidden')
+            modalGetConsult.classList.add('hidden')
+            modalVAT.classList.add('hidden')
+            modalNoVAT.classList.add('hidden')
+            modalOrderService.classList.add('hidden')
+            if(document.querySelector('.overlay').classList.contains('hidden')) {
+                document.querySelector('.overlay').classList.remove('hidden');
+                body.style.overflow = 'hidden';
+            }
+            timer = setTimeout(()=> {
+                modalSuccessSubmit.classList.add('hidden')
+                document.querySelector('.overlay').classList.add('hidden')
+                body.style.overflow = 'auto'
+            },4000)
+        }
+    )}
+    
+}
+
+

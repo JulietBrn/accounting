@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="sass/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/fav/icon_3/">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/fav/icon_3//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/fav/icon_3//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/fav/icon_3//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/fav/icon_3//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/fav/icon_3//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/fav/icon_3//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/fav/icon_3//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/fav/icon_3//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/fav/icon_3//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/fav/icon_3//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/fav/icon_3//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/fav/icon_3//favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/fav/icon_3//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Бухгалтерские услуги</title>
     <meta name="description" content="Бухгалтерские услуги, консультации, аудит, кадровое делопроизводство">
 </head>
@@ -16,9 +33,9 @@
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="index.html">Главная</a></li>
+                    <li class="nav-list__item" id="main-link"><a href="index.html">Главная</a></li>
                     <li class="nav-list__item"><a href="prices.html">Цены и тарифы</a></li>
-                    <li class="nav-list__item"><a href="services.html">Услуги</a></li>
+                    <!-- <li class="nav-list__item"><a href="services.html">Услуги</a></li> -->
                     <li class="nav-list__item"><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -36,7 +53,7 @@
                     <div class="module-prices__content-features">
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">10 сотрудников</p>
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
                     </div>
                     <div class="wrapper">
                         <div class="module-prices__content-services">
@@ -98,7 +115,7 @@
                     <div class="module-prices__content-features">
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Включая патент</p>
                         <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">До 30 операций</p>
-                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
+                        <p class="module-prices__content-feature open-sans-16 open-sans-16_bold">Оборот компании не важен</p>
                     </div>
                     <div class="wrapper">
                         <div class="module-prices__content-services">
@@ -337,25 +354,25 @@
             <div class="footer-section__wrapper">
             </div>
             <div class="footer-section__contacts">
-                <a href="index.html"><img src="icons/logo-dark.svg" alt="logo"></a>
+                <a class="footer-section__icon" href="index.html"><img src="icons/logo-dark.svg" alt="logo"></a>
                 <div class="footer-section__containers">
                     <div class="footer-section__container">
                         <ul class="open-sans-16 paragraph-text_normal">
                             <li class="footer-section__list-item">ООО «Консалт»</li>
-                            <li class="footer-section__list-item">ИНН 78 564 780 936</li>
-                            <li class="footer-section__list-item"><a href="tel:+7(920)5316798">8 (920) 531 67 98</a></li>
-                            <li class="footer-section__list-item"><a href="mailto:info@colsult.com">info@colsult.com</a></li>
+                            <li class="footer-section__list-item">ИНН 78564780936</li>
+                            <li class="footer-section__list-item "><a class="footer-section__link" href="tel:+7(920)5316798">8 (920) 531 67 98</a></li>
+                            <li class="footer-section__list-item "><a class="footer-section__link" href="mailto:info@colsult.com">info@colsult.com</a></li>
                         </ul>
                     </div>
                     <div class="footer-section__container">
                         <button class="btn btn__consultation footer-section__consult-btn">Получить консультацию</button>
-                        <a href="prices.html" class="btn">Все цены и тарифы →</a>
+                        <a href="index.html" class="btn">На главную →</a>
                     </div>
                     <div class="footer-section__container">
                         <ul class="open-sans-16 paragraph-text_normal">
-                            <li class="footer-section__list-item"><a href="services.html">Услуги</a></li>
-                            <li class="footer-section__list-item"><a href="index.html#reviews">Отзывы</a></li>
-                            <li class="footer-section__list-item"><a href="index.html#our-team">О нас</a></li>
+                            <!-- <li class="footer-section__list-item"><a class="footer-section__link" href="services.html">Услуги</a></li> -->
+                            <li class="footer-section__list-item"><a class="footer-section__link" href="index.html#reviews">Отзывы</a></li>
+                            <li class="footer-section__list-item"><a class="footer-section__link" href="index.html#our-team">О нас</a></li>
                         </ul>
                     </div>
                 </div>
@@ -370,8 +387,161 @@
             </div>
             <div class="footer-section__arrow-to-up"><a href="#prices-container-header"><img src="icons/arrow-top.svg" alt="arrow-top"></a></div>
         </footer>
+        <!-- Модальное окно. Получить консультацию. -->
+        <div class="modal hidden" id="modal-get-consultation">
+            <button class="modal__close-modal close-modal">×</button>
+            <p class="modal__title">Получить консультацию</p>
+            <div class="modal__wrapper">
+                <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p>
+                <form action="">
+                    <div class="modal__radio-wrapper">
+                        <div class="modal__vat-type">
+                            <input class="modal__radio-input" id="no-vat" type="radio" name="vat-type" checked>
+                            <label class="modal__radio-label" for="no-vat">УСН</label>
+                            <input class="modal__radio-input" id="vat" type="radio" name="vat-type" >
+                            <label class="modal__radio-label" for="vat">ОСНО</label>
+                            <input class="modal__radio-input" id="automatic" type="radio" name="vat-type">
+                            <label class="modal__radio-label" for="automatic">АУСН</label>
+                        </div>
+                        <div class="modal__company-type">
+                            <input class="modal__radio-input" id="company" type="radio" name="company-type" checked="">
+                            <label class="modal__radio-label" for="company">ООО</label>
+                            <input class="modal__radio-input" id="no-company" type="radio" name="company-type">
+                            <label class="modal__radio-label" for="no-company">ИП</label>
+                        </div>
+                    </div>
+                    <div class="modal__message-form-wrapper">
+                        <label for="name-consultation"></label>
+                        <input required class="form-input" type="text" id="name-consultation" placeholder="Ваше имя">
+                        <label for="phone-consultation"></label>
+                        <input required class="form-input" type="tel" id="phone-consultation" placeholder="Номер телефона">
+                        <label for="email-consultation"></label>
+                        <input required class="form-input" type="email" id="email-consultation" placeholder="Электронная почта">
+                        <label for="message-consultation"></label>
+                        <textarea class="form-input" type="text" id="message-consultation" placeholder="Сообщение"></textarea>
+                        <div class="modal__button-wrapper">
+                            <button class="btn btn__send" type="submit">Отправить</button>
+                            <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Модальное окно. Подключить тариф ОСНО. -->
+        <div class="modal hidden" id="modal-put-on-service-VAT">
+            <button class="modal__close-modal close-modal">×</button>
+            <p class="modal__title">Подключить тариф</p>
+            <div class="modal__wrapper">
+                <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                <form action="">
+                    <div class="modal__radio-wrapper">
+                        <div class="modal__vat-type">
+                            <input class="modal__radio-input" id="basic-tariff" type="radio" name="tariff-type" checked>
+                            <label class="modal__radio-label" for="basic-tariff">Базовый</label>
+                            <input class="modal__radio-input" id="explore-tariff" type="radio" name="tariff-type" >
+                            <label class="modal__radio-label" for="explore-tariff">Расширенный</label>
+                            <input class="modal__radio-input" id="vip-tariff" type="radio" name="tariff-type">
+                            <label class="modal__radio-label" for="vip-tariff">Премиум</label>
+                        </div>
+                    </div>
+                    <div class="modal__message-form-wrapper">
+                        <label for="name-tariff"></label>
+                        <input required class="form-input" type="text" id="name-tariff" placeholder="Ваше имя">
+                        <label for="phone-tariff"></label>
+                        <input required class="form-input" type="tel" id="phone-tariff" placeholder="Номер телефона">
+                        <label for="email-tariff"></label>
+                        <input required class="form-input" type="email" id="email-tariff" placeholder="Электронная почта">
+                        <div class="modal__button-wrapper">
+                            <button class="btn btn__send" type="submit">Отправить</button>
+                            <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Модальное окно. Подключить тариф УСН. -->
+        <div class="modal hidden" id="modal-put-on-service-no-VAT">
+            <button class="modal__close-modal close-modal">×</button>
+            <p class="modal__title">Подключить тариф</p>
+            <div class="modal__wrapper">
+                <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                <form action="">
+                    <div class="modal__radio-wrapper">
+                        <div class="modal__vat-type">
+                            <input class="modal__radio-input" id="no-vat-tariff-income" type="radio" name="tariff-type" checked>
+                            <label class="modal__radio-label" for="no-vat-tariff-income">УСН Доходы</label>
+                            <input class="modal__radio-input" id="no-vat-tariff-costs" type="radio" name="tariff-type" >
+                            <label class="modal__radio-label" for="no-vat-tariff-costs">УСН Доходы-Расходы</label>
+                            <input class="modal__radio-input" id="automatic-tariff" type="radio" name="tariff-type">
+                            <label class="modal__radio-label" for="automatic-tariff">АУСН</label>
+                        </div>
+                    </div>
+                    <div class="modal__message-form-wrapper">
+                        <label for="name-tariff"></label>
+                        <input required class="form-input" type="text" id="name-tariff-no-VAT" placeholder="Ваше имя">
+                        <label for="phone-tariff"></label>
+                        <input required class="form-input" type="tel" id="phone-tariff-no-VAT" placeholder="Номер телефона">
+                        <label for="email-tariff"></label>
+                        <input required class="form-input" type="email" id="email-tariff-no-VAT" placeholder="Электронная почта">
+                        <div class="modal__button-wrapper">
+                            <button class="btn btn__send" type="submit">Отправить</button>
+                            <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Модальное окно. Заказать услугу. -->
+        <div class="modal hidden" id="modal-order-service">
+            <button class="modal__close-modal close-modal">×</button>
+            <p class="modal__title">Заказать услугу</p>
+            <div class="modal__wrapper">
+                <!-- <p class="modal__text open-sans-16">Выберите систему налогообложения и организационно-правовую форму:</p> -->
+                <form action="">
+                    <div class="modal__radio-wrapper">
+                        <div class="modal__vat-type">
+                            <input class="modal__radio-input" id="order-accountant-service" type="checkbox" name="tariff-type" checked>
+                            <label class="modal__radio-label" for="order-accountant-service">Бухгалтерия</label>
+                            <input class="modal__radio-input" id="order-tax-consult" type="checkbox" name="tariff-type" >
+                            <label class="modal__radio-label" for="order-tax-consult">Налоговые консультации</label>
+                            <input class="modal__radio-input" id="order-hr" type="checkbox" name="tariff-type">
+                            <label class="modal__radio-label" for="order-hr">Кадровое делопроизводство</label>
+                            <input class="modal__radio-input" id="order-audit" type="checkbox" name="tariff-type">
+                            <label class="modal__radio-label" for="order-audit">Аудит</label>
+                        </div>
+                    </div>
+                    <div class="modal__message-form-wrapper">
+                        <label for="name-order-service"></label>
+                        <input required class="form-input" type="text" id="name-order-service" placeholder="Ваше имя">
+                        <label for="phone-order-service"></label>
+                        <input required class="form-input" type="tel" id="phone-order-service" placeholder="Номер телефона">
+                        <label for="email-order-service"></label>
+                        <input required class="form-input" type="email" id="email-order-service" placeholder="Электронная почта">
+                        <label for="message-order-service"></label>
+                        <input required class="form-input" type="text" id="message-order-service" placeholder="Сообщение">
+                        <div class="modal__button-wrapper">
+                            <button class="btn btn__send" type="submit">Отправить</button>
+                            <p class="open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня для уточнения деталей</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Сообщение успешно отправлено -->
+        <div class="success-submit hidden">
+            <button class="modal__close-modal close-modal">×</button>
+            <div class="success-submit__wrapper">
+                <img class="success-submit__img" src="icons/green-tick.svg" alt="green-tick">
+                <p class="success-submit__text text-title paragraph-text open-sans-16_italic paragraph-text_bold">Сообщение успешно отправлено!</p>
+                <p class="success-submit__text open-sans-16 open-sans-16_italic">Мы свяжемся с Вами в течение дня.</p>
+            </div>
+            
+        </div>
+        <div class="overlay hidden">
+            
+        </div>
     </div>
 
-    <script src="js/prices.js"></script>
+    <script type="module" src="js/prices.js"></script>
 </body>
 </html>
