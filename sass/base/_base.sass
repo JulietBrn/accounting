@@ -14,20 +14,6 @@ a
     
 li 
     list-style: none
-//     @include respond(tab-land)
-//         font-size: 56.25%
-//     @include respond(tab-port)
-//         font-size: 50%
-//     @include respond(phone)
-//         font-size: 40%
-//     @include respond(big-screen)
-//         font-size: 75%
-
-// body
-//     background-color: $color-white
-//     padding: 5rem
-//     @include respond(phone)
-//         padding: 2rem
 
 .container
     display: grid
@@ -46,9 +32,6 @@ li
         grid-template-columns: 2rem minmax(32rem, 1fr) 2rem
         
 
-        
-    
-
 .main-container
     grid-column: 2/3
     // display: grid
@@ -66,13 +49,14 @@ section
     overflow-x: clip
     display: grid
     grid-template-rows: repeat(6, min-content)
-    grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 128rem) minmax(6rem, 1fr)
+    grid-template-columns: minmax(6rem, 1fr) 116rem minmax(6rem, 1fr)
     row-gap: 11rem
+    @media (max-width: 1280px) 
+        grid-template-columns: minmax(20px, 1fr) 960px minmax(20px, 1fr)
     @media (max-width: 1000px) 
         grid-template-columns: minmax(20px, 1fr) 728px minmax(20px, 1fr)
     @media (max-width: 768px) 
         grid-template-columns:  5rem minmax(38rem, 1fr) 5rem
-        
     @media (max-width: 480px) 
         grid-template-columns: 2rem minmax(32rem, 1fr) 2rem
         row-gap: 7rem

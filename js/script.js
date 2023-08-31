@@ -246,6 +246,12 @@ function changeTypeOfPrices(type) {
     openModalActivate()
 }
 
+function clearInputs(){
+    let inputs = document.querySelectorAll('.form-input')
+    inputs.forEach(input => {
+        input.value = ''
+    })
+}
 function changeModuleContent() {
     let currentPricesContent = document.querySelector('.module-prices__content')
     currentPricesContent.remove()
@@ -270,7 +276,7 @@ btnIncomeCosts.addEventListener('click', () => changeTypeOfPrices('incomeCosts')
 function getBtnsConsult() {
     btnGetConsult = document.querySelectorAll('.btn__consultation')
 }
-console.log(timer);// open modal window
+
 function openModalCons() {
     for (let value of btnGetConsult) { //для каждого элемента из псевдомассива
         value.addEventListener('click', (e) => {
@@ -300,6 +306,7 @@ function openModalActivate() {
             document.querySelector('.overlay').classList.remove('hidden');
             body.style.overflow = 'hidden';
             getBtnsSend()
+            clearInputs()
         })
     }
     
@@ -317,6 +324,7 @@ closeModal.forEach(val => {
         })
         document.querySelector('.overlay').classList.add('hidden')
         body.style.overflow = 'auto'
+        clearInputs()
     })
 })
 // close with overlay
@@ -327,6 +335,7 @@ document.querySelector('.overlay').addEventListener('click', () => {
     })
     document.querySelector('.overlay').classList.add('hidden')
     body.style.overflow = 'auto'
+    clearInputs()
 })
 // close with key 'Escape'
 document.addEventListener('keydown', function(event) {
@@ -337,6 +346,7 @@ document.addEventListener('keydown', function(event) {
         })
         document.querySelector('.overlay').classList.add('hidden')
         body.style.overflow = 'auto'
+        clearInputs()
         }
 })
 openModalCons()
