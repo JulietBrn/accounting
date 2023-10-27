@@ -1,0 +1,45 @@
+/* Компонент кнопки */
+.btn
+    cursor: pointer
+    color: $green-color
+    border: none
+    padding: .5rem
+    font-family: komet, sans-serif
+    font-size: 1.6rem
+    font-style: normal
+    font-weight: 700
+    line-height: 112.5%
+    background: none
+    &__consultation
+        background-color: none
+        border-bottom: 2px solid $green-color
+        padding: .5rem 0
+    &__more
+        font-weight: 400
+        border-bottom: 2px dashed $green-color
+    &__send
+        color: black
+        padding: 2rem 6rem
+        display: inline
+        border: 2px solid $green-color
+        font-size: 1.6rem
+        font-style: normal
+        font-weight: 500
+        line-height: 112.5%
+        &:hover
+            background: $green-color
+            transition: .3s all
+    &__activate, &__order
+        background: $green-color
+        color: black
+        padding: 2rem 6rem  
+    &__activate
+        @media (max-width: 480px)
+            padding: 2rem 5rem 
+
+
+
+    
+
+
+
