@@ -1,0 +1,35 @@
+.s-page-card
+  background-color: $gray-color
+  width: 80%
+  padding: 5rem 6rem 6rem 6rem
+  display: grid
+  grid-template-columns: minmax(min-content, 80rem) min-content
+  column-gap: 4rem
+  &:nth-child(even)
+    grid-template-columns:  min-content minmax(min-content, 80rem)
+    justify-self: end
+    img
+      order: 1
+      justify-self: start
+    .s-page-card__content-wrapper
+      order: 2
+  &__title
+    margin-bottom: 4rem
+  &__list
+    margin-bottom: 3.6rem
+    line-height: normal
+  &__list-item
+    background: url(../icons/small-green-tick.png) no-repeat left center
+    padding-left: 2.4rem
+    margin-bottom: .5rem
+  &__descr
+    display: flex
+    flex-direction: column
+    gap: .8rem
+    max-width: 60rem
+  &__text
+    line-height: 160%
+  &__img
+    max-width: 30rem
+    justify-self: end
+    align-self: end
